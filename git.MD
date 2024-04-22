@@ -12,6 +12,7 @@ Torvalds diseñó Git con un enfoque en la velocidad, el diseño sencillo y la c
 Desde su creación, Git ha ganado una gran popularidad y se ha convertido en uno de los sistemas de control de versiones más utilizados en la industria del desarrollo de software. Es ampliamente utilizado en proyectos de código abierto y en empresas de todo el mundo.
 
 - Ventajas de usar Git
+
 **Distribuido**: Git es un sistema de control de versiones distribuido, lo que significa que cada desarrollador tiene una copia completa del repositorio. Esto facilita el trabajo offline y la colaboración entre equipos distribuidos.
 **Rápido y eficiente**: Git está diseñado para ser rápido y eficiente, incluso en proyectos muy grandes. Las operaciones como hacer commit, fusionar ramas y revisar el historial son rápidas y suelen realizarse localmente.
 **Gestión de ramas**: Git facilita la creación y gestión de ramas, lo que permite a los equipos trabajar en paralelo en diferentes características o correcciones de errores sin interferir entre sí. Esto también facilita la integración continua y la entrega continua.
