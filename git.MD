@@ -21,8 +21,7 @@ Desde su creación, Git ha ganado una gran popularidad y se ha convertido en uno
 **Comunidad y soporte**: Git cuenta con una gran comunidad de usuarios y desarrolladores que ofrecen soporte y recursos, lo que facilita su aprendizaje y resolución de problemas.
 
 
-## Instalación y configuración
-- Instalación de Git en diferentes sistemas operativos
+## Configuración
 - Configuración inicial de Git
 - Configuración de alias y personalización de Git
 
