@@ -24,7 +24,6 @@ GitHub es una plataforma basada en la nube que utiliza Git, un sistema de contro
   - Seguridad
     
   GitHub se centra en integrar la seguridad directamente en el proceso de desarrollo desde el principio. La plataforma GitHub Enterprise incluye características de seguridad nativas propias que minimizan el riesgo de seguridad con una solución de seguridad integrada. Además, su código permanece privado dentro de su organización y, al mismo tiempo, puede aprovechar la descripción general de seguridad y el Dependabot.
-
   GitHub ha seguido invirtiendo para garantizar que nuestras funciones estén preparadas para la empresa. Contamos con el respaldo de Microsoft, la confianza de industrias altamente reguladas y cumplimos con los requisitos de cumplimiento a nivel mundial.
 
   - Escala
