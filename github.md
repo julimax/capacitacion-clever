@@ -76,8 +76,6 @@ Para clonar un repositorio existente en GitHub a tu computadora, sigue estos pas
    git clone <URL>
    ```
    
-Aquí tienes cómo hacer estas operaciones en GitHub directamente:
-
 - Agregar y eliminar archivos
 Para agregar y eliminar archivos en GitHub, sigue estos pasos:
 
