@@ -56,6 +56,11 @@
 ## Introducción a GitHub
 - ¿Qué es GitHub?
 - Principales características y funciones
+  - AI
+  - Colaboración
+  - Productividad
+  - Seguridad
+  - Escala
 
 ## Creación y configuración de una cuenta
 - Crear una cuenta en GitHub
