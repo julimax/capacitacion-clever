@@ -77,6 +77,14 @@ Los conflictos en Git ocurren cuando dos ramas tienen cambios diferentes en la m
 
 ## Uso básico de Git
 
+- Clonar un repositorio remoto
+
+Para clonar un repositorio remoto en Git y obtener una copia local en tu máquina, puedes utilizar el siguiente comando:
+
+```sh
+git clone <url_repositorio>
+```
+
 - Creación de un repositorio
 
 Para crear un nuevo repositorio en Git, puedes utilizar el siguiente comando en la terminal en el directorio de tu proyecto:
@@ -125,28 +133,58 @@ git merge <nombre_rama>
 ```
 
 ## Uso avanzado de Git
+
 - Revertir cambios
+
+Para revertir cambios en Git y deshacer un commit, puedes utilizar el siguiente comando:
+
+```sh
+git revert <hash_commit>
+```
+
 - Resolución de conflictos
+
+Para resolver conflictos en Git, primero necesitas abrir los archivos con conflictos y editarlos manualmente para elegir qué cambios mantener. Una vez resueltos los conflictos, puedes agregar los archivos al área de preparación y hacer un commit para finalizar la fusión.
+
 - Uso de tags
+
+Los tags en Git se utilizan para marcar puntos específicos en la historia de un repositorio, como versiones de lanzamiento. Para crear un tag en Git, puedes utilizar el siguiente comando:
+
+```sh
+git tag <nombre_tag>
+```
+
 - Submódulos
+
+Los submódulos en Git permiten incluir otros repositorios Git dentro de un repositorio principal. Esto es útil cuando quieres incluir dependencias externas en tu proyecto. Para agregar un submódulo a tu repositorio, puedes utilizar el siguiente comando:
+
+```sh
+git submodule add <url_repositorio> <directorio_destino>
+```
+
 - Stashing
 
-## Trabajo colaborativo con Git
-- Clonar un repositorio remoto
-- Colaborar en un proyecto
-- Pull requests
-- Forks
-- Gestión de ramas en un entorno colaborativo
+El stashing en Git te permite guardar temporalmente los cambios locales sin hacer un commit. Esto es útil cuando quieres cambiar de rama o aplicar otros cambios antes de comprometer los cambios guardados. Para hacer un stash en Git, puedes utilizar el siguiente comando:
 
-## Gestión de proyectos con Git
-- Uso de GitHub, GitLab u otras plataformas
-- Creación y gestión de repositorios remotos
-- Configuración de permisos y colaboradores
-- Uso de issues y milestones
-- Integración con herramientas de integración continua (CI)
+```sh
+git stash
+```
+
+Para aplicar los cambios guardados, puedes utilizar el siguiente comando:
+
+```sh
+git stash apply
+```
 
 ## Buenas prácticas y recomendaciones
+
 - Estructura de repositorios
-- Mensajes de commit descriptivos
-- Uso de ramas de forma adecuada
-- Mantenimiento y limpieza de repositorios
+
+Es importante mantener una estructura de repositorios organizada y coherente para facilitar la navegación y el mantenimiento del código. Algunas recomendaciones incluyen:
+
+1_ Utilizar directorios para organizar diferentes tipos de archivos (por ejemplo, `src` para el código fuente, `docs` para la documentación, `tests` para las pruebas, etc.).
+2_ Utilizar nombres descriptivos para los archivos y directorios.
+3_ Evitar tener demasiados archivos en un solo directorio para evitar la congestión.
+4_ Mensajes de commit descriptivos
+5_ Uso de ramas de forma adecuada
+6_ Mantenimiento y limpieza de repositorio26
