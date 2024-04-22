@@ -32,6 +32,7 @@ Establece tu nombre de usuario que se utilizará para identificar tus commits:
 git config --global user.name "Tu Nombre"
 git config --global user.email "tu_correo@ejemplo.com"
 git config --list
+```
 
 - Configuración de SSH en Git
 
@@ -41,6 +42,7 @@ Si deseas utilizar SSH para autenticarte con Git en lugar de HTTPS, sigue estos 
 Si aún no tienes una clave SSH, genera una nueva usando el siguiente comando en tu terminal:
 ```sh
 ssh-keygen -t rsa -b 4096 -C "tu_correo@ejemplo.com"
+```
 
 - Configuración de alias y personalización de Git
 
