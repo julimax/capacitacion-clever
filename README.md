@@ -134,3 +134,4 @@
 - Uso de ramas de forma adecuada
 - Mantenimiento y limpieza de repositorios
 
+2
