@@ -48,3 +48,56 @@
 - Mensajes de commit descriptivos
 - Uso de ramas de forma adecuada
 - Mantenimiento y limpieza de repositorios
+
+---
+
+# Temario de Fundamentos de GitHub
+
+## Introducción a GitHub
+- ¿Qué es GitHub?
+- Principales características y funciones
+
+## Creación y configuración de una cuenta
+- Crear una cuenta en GitHub
+- Configuración básica del perfil
+- Configuración de la autenticación de dos factores
+
+## Uso básico de GitHub
+- Crear un repositorio
+- Clonar un repositorio
+- Agregar y eliminar archivos
+- Realizar commits
+- Ver historial de commits
+- Crear y gestionar ramas
+
+## Trabajo colaborativo en GitHub
+- Colaborar en un repositorio
+- Realizar pull requests
+- Revisar y aprobar pull requests
+- Forks y contribuciones a proyectos de código abierto
+- README.md
+- Github flow
+- Discussions
+- GitHub Pages
+- Gists
+- Wikis
+- Issues
+
+## Seguridad en github
+- Codeowners
+- Branch Protection
+- Rulesets
+- Codeql
+- Dependabot
+    
+## Gestión de proyectos en GitHub
+- Crear proyectos y tableros
+- Asignar tareas y gestionar el flujo de trabajo
+- Uso de issues y milestones en Github projects
+
+## Buenas prácticas y recomendaciones
+- Estructura de repositorios
+- Mensajes de commit descriptivos
+- Uso de ramas de forma adecuada
+- Mantenimiento y limpieza de repositorios
+
