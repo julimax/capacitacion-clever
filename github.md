@@ -72,6 +72,7 @@ Para clonar un repositorio existente en GitHub a tu computadora, sigue estos pas
 1. Ve al repositorio en GitHub que deseas clonar.
 2. Haz clic en el botón "Code" (Código) y copia la URL del repositorio.
 3. Abre tu terminal y ejecuta el siguiente comando, reemplazando `<URL>` con la URL que copiaste:
+   
    ```sh
    git clone <URL>
    ```
