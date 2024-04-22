@@ -1,4 +1,4 @@
-# Temario de Estudio de Git
+# Estudio de Git
 
 ## Introducción a Git
 - ¿Qué es Git?
