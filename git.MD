@@ -45,20 +45,84 @@ ssh-keygen -t rsa -b 4096 -C "tu_correo@ejemplo.com"
 ```
 
 ## Conceptos básicos de Git
+
 - Repositorio
+
+Un repositorio en Git es donde se almacena todo el historial de cambios de un proyecto, así como las diferentes versiones de los archivos.
+
 - Commit
+
+Un commit en Git representa un cambio específico en el repositorio. Cada commit tiene un mensaje que describe el cambio realizado.
+
 - Branch
+
+Una rama en Git es una línea de desarrollo independiente que permite trabajar en diferentes características o correcciones de errores sin afectar la rama principal.
+
 - Merge
+
+El merge en Git es el proceso de combinar los cambios de una rama en otra. Se utiliza para integrar los cambios de una rama de desarrollo en la rama principal.
+
 - Remote
+
+Un remote en Git es una referencia a un repositorio remoto, que puede estar alojado en un servidor en línea como GitHub, GitLab o Bitbucket.
+
 - Pull y Push
+
+Pull y Push son dos operaciones fundamentales en Git para sincronizar los cambios entre un repositorio local y un repositorio remoto. Pull se utiliza para obtener los cambios del repositorio remoto y actualizar el repositorio local, mientras que Push se utiliza para enviar los cambios locales al repositorio remoto.
+
 - Conflictos
 
+Los conflictos en Git ocurren cuando dos ramas tienen cambios diferentes en la misma parte de un archivo. Git no puede determinar automáticamente qué cambio debe prevalecer, por lo que es necesario resolver los conflictos manualmente.
+
+
 ## Uso básico de Git
+
 - Creación de un repositorio
+
+Para crear un nuevo repositorio en Git, puedes utilizar el siguiente comando en la terminal en el directorio de tu proyecto:
+
+```sh
+git init
+```
+
 - Agregar y eliminar archivos
+
+```sh
+git add <nombre_archivo>
+```
+
+```sh
+git rm <nombre_archivo>
+```
+
 - Realizar commits
+
+```sh
+git commit -m "Mensaje del commit"
+```
+
 - Ver historial de commits
+
+```sh
+git log
+```
+
 - Crear y gestionar ramas
+
+Para crear una nueva rama en Git, puedes utilizar el siguiente comando:
+```sh
+git branch <nombre_rama>
+```
+
+Para cambiar a una rama existente, puedes utilizar el siguiente comando:
+```sh
+git checkout <nombre_rama>
+```
+
+Para fusionar una rama con la rama actual, puedes utilizar el siguiente comando:
+```sh
+git merge <nombre_rama>
+```
 
 ## Uso avanzado de Git
 - Revertir cambios
