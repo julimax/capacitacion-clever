@@ -1,4 +1,4 @@
-# capacitacion-clever
+# Capacitacion-clever
 
 # Temario de Estudio de Git
 
