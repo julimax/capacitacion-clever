@@ -85,9 +85,9 @@
 
 ## Cuentas, planes y permisos
 - Tipo de cuentas
-    Personal
-    Organization
-    Enterprise
+    - Personal
+    - Organization
+    - Enterprise
   
 ## Seguridad en github
 - Codeowners
