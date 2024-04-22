@@ -22,6 +22,7 @@
 - Conflictos
 
 ## Uso básico de Git
+- Clonar un repositorio remoto
 - Creación de un repositorio
 - Agregar y eliminar archivos
 - Realizar commits
@@ -34,13 +35,6 @@
 - Uso de tags
 - Submódulos
 - Stashing
-
-## Trabajo colaborativo con Git
-- Clonar un repositorio remoto
-- Colaborar en un proyecto
-- Pull requests
-- Forks
-- Gestión de ramas en un entorno colaborativo
 
 ## Gestión de proyectos con Git
 - Uso de GitHub, GitLab u otras plataformas
