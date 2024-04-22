@@ -44,8 +44,6 @@ Si aún no tienes una clave SSH, genera una nueva usando el siguiente comando en
 ssh-keygen -t rsa -b 4096 -C "tu_correo@ejemplo.com"
 ```
 
-- Configuración de alias y personalización de Git
-
 ## Conceptos básicos de Git
 - Repositorio
 - Commit
