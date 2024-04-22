@@ -182,9 +182,9 @@ git stash apply
 
 Es importante mantener una estructura de repositorios organizada y coherente para facilitar la navegación y el mantenimiento del código. Algunas recomendaciones incluyen:
 
-1_ Utilizar directorios para organizar diferentes tipos de archivos (por ejemplo, `src` para el código fuente, `docs` para la documentación, `tests` para las pruebas, etc.).
-2_ Utilizar nombres descriptivos para los archivos y directorios.
-3_ Evitar tener demasiados archivos en un solo directorio para evitar la congestión.
-4_ Mensajes de commit descriptivos
-5_ Uso de ramas de forma adecuada
-6_ Mantenimiento y limpieza de repositorio26
+1- Utilizar directorios para organizar diferentes tipos de archivos (por ejemplo, `src` para el código fuente, `docs` para la documentación, `tests` para las pruebas, etc.).
+2- Utilizar nombres descriptivos para los archivos y directorios.
+3- Evitar tener demasiados archivos en un solo directorio para evitar la congestión.
+4- Mensajes de commit descriptivos
+5- Uso de ramas de forma adecuada
+6- Mantenimiento y limpieza de repositorio26
