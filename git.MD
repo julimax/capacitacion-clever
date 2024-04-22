@@ -187,4 +187,22 @@ Es importante mantener una estructura de repositorios organizada y coherente par
 3. Evitar tener demasiados archivos en un solo directorio para evitar la congestión.
 4. Mensajes de commit descriptivos
 5. Uso de ramas de forma adecuada
-6. Mantenimiento y limpieza de repositorio26
+6. Mantenimiento y limpieza de repositorio
+
+- Mensajes de commit descriptivos
+Los mensajes de commit deben ser claros y descriptivos para que cualquier persona pueda entender rápidamente el propósito y los cambios realizados en el commit. Algunas recomendaciones para escribir mensajes de commit incluyen:
+1. Utilizar un formato consistente (por ejemplo, comenzar el mensaje con un verbo en infinitivo como "Agregar", "Corregir", "Eliminar", etc.).
+2. Ser conciso pero informativo.
+3. Explicar el porqué de los cambios, no solo el qué.
+
+- Uso de ramas de forma adecuada
+Utilizar las ramas de Git de manera adecuada puede ayudar a mantener un flujo de trabajo ordenado y a evitar conflictos. Algunas recomendaciones incluyen:
+1. Utilizar ramas separadas para cada característica o corrección de errores.
+2. Nombrar las ramas de manera descriptiva y consistente.
+3. Fusionar las ramas solo después de revisar y probar los cambios.
+
+- Mantenimiento y limpieza de repositorios
+Es importante mantener los repositorios limpios y actualizados para evitar problemas y mejorar la eficiencia. Algunas acciones de mantenimiento incluyen:
+1. Eliminar ramas obsoletas que ya no se utilizan.
+2. Limpiar archivos temporales y archivos generados automáticamente.
+3. Mantener actualizadas las depen
