@@ -83,12 +83,26 @@
 - Wikis
 - Issues
 
+## Cuentas, planes y permisos
+- Tipo de cuentas
+    Personal
+    Organization
+    Enterprise
+  
 ## Seguridad en github
 - Codeowners
 - Branch Protection
 - Rulesets
 - Codeql
 - Dependabot
+
+
+
+## Introdución Github Copilot
+
+
+## Codespaces y Github Desktop
+
     
 ## Gestión de proyectos en GitHub
 - Crear proyectos y tableros
