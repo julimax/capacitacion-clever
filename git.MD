@@ -14,10 +14,15 @@ Desde su creación, Git ha ganado una gran popularidad y se ha convertido en uno
 - Ventajas de usar Git
 
 **Distribuido**: Git es un sistema de control de versiones distribuido, lo que significa que cada desarrollador tiene una copia completa del repositorio. Esto facilita el trabajo offline y la colaboración entre equipos distribuidos.
+
 **Rápido y eficiente**: Git está diseñado para ser rápido y eficiente, incluso en proyectos muy grandes. Las operaciones como hacer commit, fusionar ramas y revisar el historial son rápidas y suelen realizarse localmente.
+
 **Gestión de ramas**: Git facilita la creación y gestión de ramas, lo que permite a los equipos trabajar en paralelo en diferentes características o correcciones de errores sin interferir entre sí. Esto también facilita la integración continua y la entrega continua.
+
 **Seguimiento de cambios**: Git realiza un seguimiento completo de los cambios realizados en el código, lo que permite a los desarrolladores revisar el historial, revertir cambios y realizar un seguimiento de quién hizo qué y cuándo.
+
 **Compatibilidad**: Git es compatible con una amplia gama de sistemas operativos y servicios de alojamiento de repositorios, lo que facilita su integración en entornos de desarrollo existentes.
+
 **Comunidad y soporte**: Git cuenta con una gran comunidad de usuarios y desarrolladores que ofrecen soporte y recursos, lo que facilita su aprendizaje y resolución de problemas.
 
 
