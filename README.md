@@ -75,6 +75,7 @@
 - Realizar pull requests
 - Revisar y aprobar pull requests
 - Forks y contribuciones a proyectos de código abierto
+- Markdown
 - README.md
 - Github flow
 - Discussions
@@ -88,21 +89,34 @@
     - Personal
     - Organization
     - Enterprise
+- Tipos de planes
+    - GitHub Free for personal accounts and organizations
+    - GitHub Pro for personal accounts
+    - GitHub Team
+    - GitHub Enterprise
+- Permisos
+    - Read
+    - Triage
+    - Write
+    - Maintain
+    - Admin
   
-## Seguridad en github
+## Seguridad y control en github
 - Codeowners
 - Branch Protection
 - Rulesets
 - Codeql
 - Dependabot
 
+## Introducción a GitHub Copilot
+- ¿Qué es GitHub Copilot?
+- Funcionalidades principales
+- Integración con editores de código
 
-
-## Introdución Github Copilot
-
-
-## Codespaces y Github Desktop
-
+## Codespaces, GitHub Mobile y GitHub Desktop
+- Codespaces: desarrollo en la nube con GitHub
+- GitHub Mobile: acceso a GitHub desde dispositivos móviles
+- GitHub Desktop: cliente de escritorio para GitHub
     
 ## Gestión de proyectos en GitHub
 - Crear proyectos y tableros
