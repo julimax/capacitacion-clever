@@ -210,4 +210,4 @@ Utilizar las ramas de Git de manera adecuada puede ayudar a mantener un flujo de
 Es importante mantener los repositorios limpios y actualizados para evitar problemas y mejorar la eficiencia. Algunas acciones de mantenimiento incluyen:
 1. Eliminar ramas obsoletas que ya no se utilizan.
 2. Limpiar archivos temporales y archivos generados automáticamente.
-3. Mantener actualizadas las depen
+3. Mantener actualizadas las dependencias
