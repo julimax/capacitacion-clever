@@ -1,4 +1,4 @@
-# Temario de Fundamentos de GitHub
+###### Temario de Fundamentos de GitHub
 
 ## Introducción a GitHub
 - ¿Qué es GitHub?
