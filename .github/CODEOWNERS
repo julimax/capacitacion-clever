@@ -1,0 +1,38 @@
+# CODEOWNERS 
+
+## Owners
+ 
+## Feature Branch
+
+feature/**
+
+## Develop and Release Branch
+
+# Technical Leads responsible for approval in Develop and managing changes in Release:
+
+develop @bitbucket-$ProjectKey-tl
+
+## Master Branch
+
+# Custodians responsible for approving Pull Requests to Master:
+
+master @modificar (buscar en bitbucket)
+
+## Main Branch
+
+# Custodians responsible for approving Pull Requests to Main:
+
+main @modificar (buscar en bitbucket)
+
+## Deployment Environments
+
+# Technical Lead responsible for viewing deployment environments:
+
+**/.github/** @admin @devops
+
+## BNK Prod Environments
+
+# BNK Prod responsible for viewing and deploying in Pre-Prod and Production environments:
+
+/.github/preproduction/** @bamboo-bnk-prod
+/.github/production/** @bamboo-bnk-prod
