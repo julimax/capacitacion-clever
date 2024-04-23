@@ -105,18 +105,31 @@ Para crear y gestionar ramas en GitHub, sigue estos pasos:
 4. Puedes fusionar ramas usando la interfaz web de GitHub, pero ten en cuenta que algunas fusiones pueden requerir un pull request y aprobación.
 
 ## Trabajo colaborativo en GitHub
-- Colaborar en un repositorio
-- Realizar pull requests
-- Revisar y aprobar pull requests
-- Forks y contribuciones a proyectos de código abierto
-- Markdown
-- README.md
-- Github flow
-- Discussions
-- GitHub Pages
-- Gists
-- Wikis
-- Issues
+
+- **Colaborar en un repositorio:** Trabajar en equipo en un repositorio compartido, permitiendo a múltiples personas contribuir al código, realizar cambios y mantener un historial de versiones.
+
+- **Realizar pull requests:** Solicitar la incorporación de cambios realizados en una rama a otra rama, permitiendo revisar y discutir los cambios antes de fusionarlos.
+
+- **Revisar y aprobar pull requests:** Analizar los cambios propuestos en un pull request, hacer comentarios, sugerir modificaciones y finalmente aprobar la fusión si los cambios son aceptables.
+
+- **Forks y contribuciones a proyectos de código abierto:** Crear una copia personal de un repositorio ajeno para realizar cambios sin afectar el repositorio original, y contribuir con mejoras a proyectos de código abierto mediante pull requests desde el fork.
+
+- **Markdown:** Lenguaje de marcado ligero para formatear texto de manera sencilla y legible en plataformas como GitHub, permitiendo agregar estilo al texto sin necesidad de utilizar HTML.
+
+- **README.md:** Archivo de texto Markdown que se encuentra en la raíz de un repositorio y que suele contener información relevante sobre el proyecto, como su descripción, instrucciones de instalación, uso y contribución, entre otros.
+
+- **GitHub flow:** Metodología de trabajo que utiliza ramas para cada nueva funcionalidad o corrección de errores, pull requests para solicitar la revisión de los cambios y la fusión de ramas una vez que los cambios han sido aprobados.
+
+- **Discussions:** Espacio en GitHub para discutir temas relacionados con un repositorio, permitiendo a los colaboradores intercambiar ideas, hacer preguntas y proponer soluciones.
+
+- **GitHub Pages:** Servicio de GitHub que permite publicar sitios web estáticos directamente desde un repositorio, facilitando la creación de páginas web para documentación, portafolios y proyectos personales.
+
+- **Gists:** Pequeños fragmentos de código, textos o imágenes que se pueden compartir de forma pública o privada en GitHub, útiles para mostrar ejemplos de código, tomar notas o colaborar en pequeños proyectos.
+
+- **Wikis:** Páginas web colaborativas asociadas a un repositorio en GitHub, que permiten documentar el proyecto, compartir información y colaborar en la creación de contenido.
+
+- **Issues:** Registro de tareas, mejoras, errores o cualquier otro tema relacionado con un proyecto en GitHub, que permite realizar un seguimiento de las actividades y facilita la colaboración entre los miembros del equipo.
+
 
 ## Cuentas, planes y permisos
 - Tipo de cuentas
