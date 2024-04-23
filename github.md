@@ -132,46 +132,70 @@ Para crear y gestionar ramas en GitHub, sigue estos pasos:
 
 
 ## Cuentas, planes y permisos
-- Tipo de cuentas
-    - Personal
-    - Organization
-    - Enterprise
-- Tipos de planes
-    - GitHub Free for personal accounts and organizations
-    - GitHub Pro for personal accounts
-    - GitHub Team
-    - GitHub Enterprise
-- Permisos
-    - Read
-    - Triage
-    - Write
-    - Maintain
-    - Admin
+
+- **Tipo de cuentas**
+    - Personal: Cuenta individual para uso personal.
+    - Organization: Cuenta para organizaciones o equipos de trabajo, que permite gestionar varios repositorios y colaboradores.
+    - Enterprise: Cuenta para empresas grandes que necesitan funciones avanzadas de seguridad y gestión.
+
+- **Tipos de planes**
+    - GitHub Free: Gratuito para cuentas personales y organizaciones, con funciones básicas como control de versiones, seguimiento de problemas y colaboración básica.
+    - GitHub Pro: Para cuentas personales que requieren funciones avanzadas como repositorios privados y soporte prioritario.
+    - GitHub Team: Para equipos que necesitan colaboración y administración de proyectos avanzada.
+    - GitHub Enterprise: Para empresas que necesitan control total sobre su infraestructura de GitHub, con funciones de seguridad y gestión avanzadas.
+
+- **Permisos**
+    - Read: Permite ver y clonar repositorios.
+    - Triage: Permite gestionar problemas y solicitudes de extracción.
+    - Write: Permite realizar cambios en los repositorios, incluida la creación de ramas y la confirmación de cambios.
+    - Maintain: Permite administrar el repositorio, incluida la administración de problemas, solicitudes de extracción y ramas.
+    - Admin: Permite realizar cambios en la configuración del repositorio, incluidos los permisos de los colaboradores y la configuración de la seguridad.
+
   
-## Seguridad y control en github
-- Codeowners
-- Branch Protection
-- Rulesets
-- Codeql
-- Dependabot
+## Seguridad y control en GitHub
+
+- **Codeowners:** Archivo en un repositorio que especifica qué usuarios o equipos son responsables de revisar y aprobar cambios en ciertos archivos o directorios, ayudando a distribuir la responsabilidad de revisión del código.
+
+- **Branch Protection:** Funcionalidad que permite proteger ramas específicas de un repositorio, configurando reglas que controlan quién puede hacer cambios directamente en la rama y quién debe hacer cambios a través de solicitudes de extracción (pull requests).
+
+- **Rulesets:** Conjunto de reglas configurables que se pueden aplicar a un repositorio para controlar el comportamiento de los colaboradores y las acciones que pueden realizar, como requerir revisiones de código antes de fusionar cambios.
+
+- **CodeQL:** Herramienta de análisis estático de código propiedad de GitHub que permite identificar vulnerabilidades de seguridad y errores en el código, ayudando a mejorar la calidad y seguridad del software.
+
+- **Dependabot:** Bot de GitHub que escanea los archivos de dependencias de un repositorio en busca de actualizaciones de paquetes y crea solicitudes de extracción automáticas para mantener las dependencias actualizadas y seguras.
 
 ## Introducción a GitHub Copilot
-- ¿Qué es GitHub Copilot?
-- Funcionalidades principales
-- Integración con editores de código
+
+- **¿Qué es GitHub Copilot?** GitHub Copilot es una extensión para varios editores de código que utiliza inteligencia artificial para ayudarte a escribir código, ofreciendo sugerencias de código en tiempo real basadas en el contexto de tu proyecto y tus patrones de escritura.
+
+- **Funcionalidades principales** GitHub Copilot puede ayudarte a completar líneas de código, escribir funciones completas, ofrecer correcciones rápidas y sugerencias de refactorización, todo ello basado en el contexto de tu código y el lenguaje de programación que estés utilizando.
+
+- **Integración con editores de código** GitHub Copilot está integrado con varios editores de código populares, como Visual Studio Code, JetBrains IntelliJ IDEA y PyCharm, Atom y Visual Studio, lo que te permite utilizar sus funciones directamente desde tu entorno de desarrollo favorito.
 
 ## Codespaces, GitHub Mobile y GitHub Desktop
-- Codespaces: desarrollo en la nube con GitHub
-- GitHub Mobile: acceso a GitHub desde dispositivos móviles
-- GitHub Desktop: cliente de escritorio para GitHub
+
+- **Codespaces: desarrollo en la nube con GitHub** Codespaces es un entorno de desarrollo en la nube que te permite crear y gestionar entornos de desarrollo completos directamente desde GitHub, lo que facilita la colaboración y el desarrollo desde cualquier lugar.
+
+- **GitHub Mobile: acceso a GitHub desde dispositivos móviles** GitHub Mobile es una aplicación móvil que te permite acceder a tus repositorios, problemas, solicitudes de extracción y otras funciones de GitHub desde tu dispositivo móvil, facilitando la colaboración y la gestión de tus proyectos en movimiento.
+
+- **GitHub Desktop: cliente de escritorio para GitHub** GitHub Desktop es una aplicación de escritorio que te permite gestionar tus repositorios de GitHub de forma visual y sencilla, permitiéndote clonar repositorios, crear ramas, realizar confirmaciones y fusionar cambios de forma intuitiva.
+
     
 ## Gestión de proyectos en GitHub
-- Crear proyectos y tableros
-- Asignar tareas y gestionar el flujo de trabajo
-- Uso de issues y milestones en Github projects
+
+- **Crear proyectos y tableros:** Utiliza la función de proyectos de GitHub para organizar y priorizar tareas, crear tableros personalizados y visualizar el progreso de tu proyecto.
+
+- **Asignar tareas y gestionar el flujo de trabajo:** Asigna tareas a colaboradores, establece fechas límite y utiliza etiquetas para categorizar y seguir el progreso de las tareas.
+
+- **Uso de issues y milestones en GitHub projects:** Utiliza issues para rastrear errores, solicitudes de funcionalidades y otras tareas, y agrupa issues relacionados en milestones para un mejor seguimiento del progreso del proyecto.
 
 ## Buenas prácticas y recomendaciones
-- Estructura de repositorios
-- Mensajes de commit descriptivos
-- Uso de ramas de forma adecuada
-- Mantenimiento y limpieza de repositorios
+
+- **Estructura de repositorios:** Mantén una estructura de repositorio clara y coherente, con carpetas bien organizadas y nombres de archivos descriptivos para facilitar la navegación y la colaboración.
+
+- **Mensajes de commit descriptivos:** Escribe mensajes de commit claros y descriptivos que expliquen los cambios realizados y por qué se realizaron, para que otros colaboradores puedan entender fácilmente el historial de cambios.
+
+- **Uso de ramas de forma adecuada:** Utiliza ramas para trabajar en nuevas funcionalidades o correcciones de errores, fusionando cambios a la rama principal (por ejemplo, `main` o `master`) mediante solicitudes de extracción una vez que estén listos y revisados.
+
+- **Mantenimiento y limpieza de repositorios:** Elimina ramas y archivos obsoletos, revisa regularmente los issues y las tareas pendientes, y realiza una limpieza periódica del repositorio para mantenerlo organizado y eficiente.
+
