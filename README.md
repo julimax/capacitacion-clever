@@ -139,6 +139,7 @@
 - ¿Qué es Docker?
 - Historia y contexto
 - Ventajas y casos de uso
+- Algunos casos de uso comunes de Docker 
 
 ## Conceptos fundamentales
 - Contenedores vs. máquinas virtuales
