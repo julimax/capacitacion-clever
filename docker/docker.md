@@ -33,6 +33,8 @@ Docker fue lanzado por primera vez en 2013 y se basa en tecnologías de contened
     - Cada contenedor ejecuta una aplicación o proceso específico, con sus propias bibliotecas y dependencias, pero comparte el kernel con otros contenedores.
     - Los contenedores son más rápidos de iniciar que las VMs y utilizan menos recursos.
       
+  ![Docker Image](../imagenes/docker-vs-virtual-machine.png)
+      
 - Imágenes Docker
 
   - Las imágenes Docker son plantillas de solo lectura que contienen el sistema operativo, las bibliotecas y las dependencias necesarias para ejecutar una aplicación.
