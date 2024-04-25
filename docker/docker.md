@@ -58,16 +58,25 @@ Docker fue lanzado por primera vez en 2013 y se basa en tecnologías de contened
 - Descarga e instalación en diferentes sistemas operativos
 - Configuración básica
 
+## Crear imagen docker
+
+###Una vez construida la imagen, se puede utilizar para crear y ejecutar contenedores Docker
+  
+  docker build -t mydjangoapp .
+
+Esto construiría una imagen con nombre "mi_imagen" a partir del Dockerfile en el directorio actual
+
 ## Creación y gestión de contenedores
 
 - Ejecución de contenedores
   - Para ejecutar un contenedor Docker, se utiliza el comando `docker run`.
-  - Ejemplo: `docker run -d --name mi_contenedor nginx` (esto ejecutaría un contenedor de nginx en segundo plano).
+
+  docker run -p 5000:443 mydjangoapp
 
 - Interacción con contenedores
   
   - Para interactuar con un contenedor en ejecución, se pueden utilizar varios comandos de Docker, como `docker exec`, `docker attach`, y `docker logs`.
-  - Ejemplo: `docker exec -it mi_contenedor bash` (esto abriría una sesión bash interactiva en el contenedor llamado "mi_contenedor").
+  - Ejemplo: `docker exec -it mydjangoapp /bin/bash` (esto abriría una sesión bash interactiva en el contenedor llamado "mi_contenedor").
 
 - Ciclo de vida de un contenedor
   
@@ -99,12 +108,6 @@ Docker fue lanzado por primera vez en 2013 y se basa en tecnologías de contened
   - **EXPOSE:** Expone puertos en los contenedores basados en la imagen.
   - **WORKDIR:** Establece el directorio de trabajo para cualquier instrucción RUN, CMD, ENTRYPOINT, COPY y ADD que se ejecute en la imagen.
   - **VOLUME:** Crea un punto de montaje para almacenar datos generados por el contenedor o para acceder a datos desde el host.
-
-- Construcción de imágenes personalizadas
-  
-  - Para construir una imagen Docker a partir de un Dockerfile, se utiliza el comando `docker build`.
-  - Ejemplo: `docker build -t mi_imagen .` (esto construiría una imagen con nombre "mi_imagen" a partir del Dockerfile en el directorio actual).
-  - Una vez construida la imagen, se puede utilizar para crear y ejecutar contenedores Docker.
 
 
 ## Redes en Docker
