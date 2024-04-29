@@ -112,6 +112,34 @@ Esto construiría una imagen con nombre "mi_imagen" a partir del Dockerfile en e
 
 ## Redes en Docker
 - Tipos de redes en Docker
+
+1. **Bridge Network (Red de puente)**:
+   - Es la red por defecto en Docker.
+   - Permite la comunicación entre contenedores en el mismo host mediante una red virtual.
+   - Cada contenedor conectado a esta red obtiene una dirección IP única dentro de la subred de puente.
+   - Puedes crear tu propia red de puente personalizada para aislar tus contenedores.
+
+2. **Host Network (Red de anfitrión)**:
+   - Con esta opción, el contenedor no tiene su propia interfaz de red, sino que usa directamente la interfaz de red del host.
+   - Esto permite que el contenedor tenga acceso directo a todos los servicios disponibles en el host, sin necesidad de redireccionamiento de puertos.
+
+3. **Overlay Network (Red superpuesta)**:
+   - Es útil para conectar contenedores que se ejecutan en diferentes hosts Docker.
+   - Permite la comunicación segura y transparente entre contenedores en diferentes hosts utilizando un enrutamiento basado en VXLAN (Virtual Extensible LAN).
+   - Es especialmente útil en entornos distribuidos y en la orquestación de contenedores con herramientas como Docker Swarm o Kubernetes.
+
+4. **Macvlan Network (Red Macvlan)**:
+   - Proporciona a los contenedores direcciones IP directamente desde la red física del host.
+   - Cada contenedor se ve como un dispositivo de red independiente en la red física, con su propia dirección MAC y dirección IP.
+   - Esto permite que los contenedores se integren perfectamente en redes existentes, como si fueran máquinas virtuales o servidores físicos.
+
+5. **None Network (Sin red)**:
+   - Con esta opción, se deshabilita la configuración de red para el contenedor.
+   - El contenedor no tendrá acceso a ninguna red, ni siquiera a la red local del host.
+   - Se utiliza en situaciones donde no se requiere conectividad de red para el contenedor.
+
+Cada tipo de red en Docker tiene sus propias ventajas y casos de uso específicos, por lo que es importante comprender cómo funcionan y cuándo utilizar cada uno.
+
 - Creación y gestión de redes
 - Conexión de contenedores en redes
 
