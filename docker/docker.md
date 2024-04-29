@@ -262,9 +262,69 @@ lugar de servicios de Swarm.
 Estos son los pasos básicos para conectar contenedores en diferentes tipos de redes en Docker. 
 
 ## Volúmenes en Docker
+
+
+Los volúmenes en Docker son una forma de persistir datos más allá de la vida de un contenedor. Esto significa que los datos almacenados en un volumen seguirán existiendo incluso si el contenedor se detiene o se elimina. Los volúmenes son útiles para almacenar datos que necesitan persistencia, como bases de datos, archivos de configuración, o cualquier otro tipo de información que deba conservarse.
+
 - Persistencia de datos en contenedores
+Sin el uso de volúmenes, los datos dentro de un contenedor son efímeros, lo que significa que se pierden cuando el contenedor se detiene o se elimina. Al utilizar volúmenes, puedes montar un directorio del host en el contenedor o utilizar un volumen Docker administrado para persistir los datos. Esto garantiza que los datos continúen existiendo incluso si el contenedor se recrea o se mueve a otro host.
+
 - Tipos de volúmenes
+
+En Docker, hay varios tipos de volúmenes que puedes utilizar para persistir datos:
+
+  - Volúmenes de host (host volumes):
+  Utilizan un directorio en el host como almacenamiento para el contenedor.
+  Pueden ser útiles para compartir archivos entre el host y el contenedor.
+
+  - Volúmenes de contenedor (container volumes):
+  Son volúmenes que se crean y administran completamente dentro del ciclo de vida del contenedor.
+  Son útiles para almacenar datos específicos del contenedor que no necesitan persistencia más allá de la vida del contenedor.
+  V
+  - Volúmenes de Docker (Docker volumes):
+  Son volúmenes Docker administrados por Docker.
+  Proporcionan una forma conveniente de persistir datos y son fáciles de usar en entornos de orquestación como Docker Swarm o Kubernetes.
+
 - Gestión de volúmenes
+
+1. Crear un volumen
+
+```sh
+docker volume create mi_volumen
+```
+
+2. Listar volúmenes
+
+Para ver una lista de todos los volúmenes disponibles en tu sistema Docker, puedes utilizar el comando docker volume ls:
+
+```sh
+docker volume ls
+```
+
+3. Inspeccionar un volumen
+
+```sh
+docker volume inspect mi_volumen
+```
+
+4. Eliminar un volumen
+
+```sh
+docker volume rm mi_volumen
+```
+
+5. Montar un volumen en un contenedor
+
+```sh
+docker run -d --name mi_contenedor -v mi_volumen:/ruta/en/el/contenedor imagen
+```
+
+Montar un volumen utilizando --mount
+Otra forma de montar un volumen en un contenedor es utilizando la opción --mount seguida de la especificación del volumen. 
+
+```sh
+docker run -d --name mi_contenedor --mount source=mi_volumen,target=/ruta/en/el/cont
+```
 
 ## Docker Compose
 - Definición y sintaxis de archivos YAML
