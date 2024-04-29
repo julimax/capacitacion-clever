@@ -327,16 +327,123 @@ docker run -d --name mi_contenedor --mount source=mi_volumen,target=/ruta/en/el/
 ```
 
 ## Docker Compose
-- Definición y sintaxis de archivos YAML
-- Uso de Docker Compose para la gestión de aplicaciones multi-contenedor
-- Ejemplos de uso
 
-## Orquestación de contenedores con Docker Swarm (opcional)
-- Conceptos básicos de orquestación
-- Configuración de un clúster Docker Swarm
-- Despliegue y gestión de servicios
+- Definición y sintaxis de archivos YAML
+
+Docker Compose es una herramienta que te permite definir y ejecutar aplicaciones Docker de múltiples contenedores de forma sencilla utilizando un archivo YAML. Este archivo YAML contiene la configuración de los servicios, volúmenes, redes y otras opciones necesarias para ejecutar la aplicación.
+
+La sintaxis básica de un archivo YAML para Docker Compose es la siguiente:
+
+
+```yaml
+  version: '3'
+  services:
+    servicio1:
+      image: imagen1
+      ports:
+        - "puerto_host:puerto_contenedor"
+      volumes:
+        - nombre_volumen:/ruta/en/contenedor
+    servicio2:
+      image: imagen2
+      environment:
+        - VARIABLE=valor
+      depends_on:
+        - servicio1
+```
+En este ejemplo, version especifica la versión de Docker Compose que estás utilizando. services define los diferentes servicios de la aplicación, donde cada servicio puede tener opciones como image (la imagen Docker a utilizar), ports (puertos a mapear), volumes (volúmenes a montar), environment (variables de entorno), y depends_on (dependencias entre servicios).
+
+- Uso de Docker Compose para la gestión de aplicaciones multi-contenedor
+
+Docker Compose simplifica la gestión de aplicaciones multi-contenedor al permitirte definir la configuración de todos los servicios en un único archivo YAML. Con Compose, puedes iniciar todos los servicios de tu aplicación con un solo comando, gestionar redes y volúmenes, y escalar servicios de forma sencilla.
+
+Ejecutar una aplicación de dos contenedores:Supongamos que tienes una aplicación web que consta de un contenedor para el servidor web y otro para la base de datos. Puedes definir tu archivo docker-compose.yml de la siguiente manera:
+
+```yml
+version: '3'
+services:
+  web:
+    image: nginx
+    ports:
+      - "80:80"
+  db:
+    image: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=example
+```
+
+Luego, puedes ejecutar tu aplicación con el comando:
+
+```sh
+docker-compose up
+```
+
+Ejecutar una aplicación con volúmenes y variables de entorno:Supongamos que quieres ejecutar una aplicación de WordPress con una base de datos MySQL, utilizando volúmenes para persistir los datos y variables de entorno para la configuración. Puedes definir tu archivo docker-compose.yml 
+
+```yml
+version: '3'
+services:
+  wordpress:
+    image: wordpress
+    ports:
+      - "8080:80"
+    environment:
+      - WORDPRESS_DB_HOST=db
+      - WORDPRESS_DB_NAME=wordpress
+      - WORDPRESS_DB_USER=root
+      - WORDPRESS_DB_PASSWORD=password
+    volumes:
+      - wordpress:/var/www/html
+  db:
+    image: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+    volumes:
+      - db:/var/lib/mysql
+volumes:
+  wordpress:
+  db:
+```
+Para ejecutar la aplicación, utiliza el comando:
+
+```sh
+docker-compose up
+```
 
 ## Integración con otras herramientas
+
 - Docker y CI/CD
-- Docker y herramientas de monitorización
+
+La integración de Docker con CI/CD (Continuous Integration/Continuous Deployment) permite automatizar el proceso de construcción, pruebas y despliegue de aplicaciones en contenedores Docker. Algunas formas de integrar Docker con CI/CD incluyen:
+
+1. Ejecución de pruebas en contenedores: Utilizar contenedores Docker para ejecutar pruebas unitarias, de integración o de rendimiento de forma aislada y reproducible.
+
+2. Construcción de imágenes Docker: Utilizar scripts de CI/CD para construir imágenes Docker automáticamente a partir del código fuente y las dependencias de la aplicación.
+
+3. Despliegue de contenedores: Utilizar herramientas de CI/CD para desplegar contenedores Docker en entornos de desarrollo, pruebas o producción de forma automatizada y controlada.
+
+4. Integración con herramientas de control de versiones: Utilizar ganchos de Git u otras integraciones para desencadenar la construcción y despliegue de contenedores Docker en función de cambios en el repositorio de código.
+
+- Docker y herramientas de monitorización Integración de Docker con herramientas de monitorización
+
+La integración de Docker con herramientas de monitorización permite supervisar el rendimiento, la disponibilidad y la salud de los contenedores y aplicaciones en contenedores. Algunas formas de 
+-integrar Docker con herramientas de monitorización incluyen:
+
+1. Uso de métricas de Docker: Utilizar la API de Docker para obtener métricas sobre el uso de recursos de los contenedores, como CPU, memoria y red.
+
+2. Integración con herramientas de monitorización de aplicaciones: Utilizar herramientas como Prometheus, Grafana o Datadog para recopilar y visualizar métricas específicas de la aplicación que se ejecuta en los contenedores Docker.
+Supervisión de registros: Utilizar herramientas como ELK Stack (Elasticsearch, Logstash, Kibana) o Fluentd para recopilar, analizar y visualizar los registros generados por los contenedores Docker.
+
+3. Alertas y notificaciones: Configurar alertas y notificaciones para recibir avisos sobre posibles problemas o situaciones anómalas en los contenedores Docker.
+
 - Docker y Kubernetes
+
+Docker y Kubernetes son tecnologías complementarias que se utilizan juntas para gestionar y orquestar contenedores en entornos de producción. Algunas formas de integrar Docker con Kubernetes incluyen:
+
+1. Despliegue de contenedores Docker en Kubernetes: Utilizar Kubernetes para gestionar y orquestar la ejecución de contenedores Docker en clústeres de Kubernetes.
+
+2. Definición de recursos de Kubernetes en archivos YAML: Utilizar archivos YAML para definir los recursos de Kubernetes, incluidos los despliegues, los servicios y los volúmenes persistentes, que utilizan imágenes Docker.
+
+3. Integración con Docker Compose: Utilizar herramientas como Kompose para convertir archivos Docker Compose en archivos de configuración de Kubernetes, facilitando el despliegue de aplicaciones en Kubernetes.
+
+4. Desarrollo y prueba local: Utilizar herramientas como Minikube o Docker Desktop para desarrollar y probar aplicaciones basadas en Kubernetes y contenedores Docker en entornos locales antes de desplegar en un clúster de Kubernetes en la nube.
