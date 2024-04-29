@@ -280,7 +280,7 @@ En Docker, hay varios tipos de volúmenes que puedes utilizar para persistir dat
   - Volúmenes de contenedor (container volumes):
   Son volúmenes que se crean y administran completamente dentro del ciclo de vida del contenedor.
   Son útiles para almacenar datos específicos del contenedor que no necesitan persistencia más allá de la vida del contenedor.
-  V
+  
   - Volúmenes de Docker (Docker volumes):
   Son volúmenes Docker administrados por Docker.
   Proporcionan una forma conveniente de persistir datos y son fáciles de usar en entornos de orquestación como Docker Swarm o Kubernetes.
