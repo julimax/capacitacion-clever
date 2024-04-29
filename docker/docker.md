@@ -141,6 +141,70 @@ Esto construiría una imagen con nombre "mi_imagen" a partir del Dockerfile en e
 Cada tipo de red en Docker tiene sus propias ventajas y casos de uso específicos, por lo que es importante comprender cómo funcionan y cuándo utilizar cada uno.
 
 - Creación y gestión de redes
+
+1. Crear una red de puente (bridge):
+
+
+```sh
+  docker network create <nombre_red>
+```
+
+2. Crear una red de anfitrión (host):
+
+No es necesario crearla, ya que utiliza directamente la red del host.
+
+3. Crear una red superpuesta (overlay):
+
+
+```sh
+  docker network create --driver overlay <nombre_red>
+```
+
+3. Crear una red Macvlan:
+
+Para crear una red Macvlan, es necesario especificar la configuración de red adecuada, como la subred y la puerta de enlace. Este es un ejemplo básico:
+
+```sh
+  docker network create -d macvlan --subnet=192.168.1.0/24 --gateway=192.168.1.1 -o parent=eth0 <nombre_red>
+```
+
+Reemplaza eth0 con el nombre de tu interfaz de red.
+
+- Gestión de redes
+
+Listar redes:
+
+```sh
+docker network ls
+```
+
+Inspeccionar una red:
+
+```sh
+docker network inspect <nombre_red>
+```
+
+Esto mostrará información detallada sobre la red, incluidos los contenedores conectados a ella.
+Conectar un contenedor a una red:
+
+```sh
+  docker network connect <nombre_red> <nombre_contenedor>
+```
+
+Desconectar un contenedor de una red:
+
+```sh
+docker network disconnect <nombre_red> <nombre_contenedor>
+```
+
+Eliminar una red:
+
+```sh
+docker network rm <nombre_red>
+```
+
+Antes de eliminar una red, asegúrate de que no haya contenedores conectados a ella.
+
 - Conexión de contenedores en redes
 
 ## Volúmenes en Docker
