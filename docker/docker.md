@@ -207,6 +207,60 @@ Antes de eliminar una red, asegúrate de que no haya contenedores conectados a e
 
 - Conexión de contenedores en redes
 
+1. Crear una red de puente (si no está creada):
+
+```sh
+docker network create mi_red_bridge
+```
+
+Iniciar dos contenedores y conectarlos a la red de puente:
+
+```sh
+docker run -d --name contenedor1 --network mi_red_bridge imagen1
+docker run -d --name contenedor2 --network mi_red_bridge imagen2
+```
+
+Donde imagen1 y imagen2 son las imágenes de los contenedores que deseas conectar.
+
+2. Conexión en una red superpuesta (overlay)
+
+Crear una red superpuesta (si no está creada):
+
+```sh
+docker network create --driver overlay mi_red_overlay
+```
+
+Iniciar dos contenedores y conectarlos a la red superpuesta:
+
+```sh
+docker service create --name servicio1 --network mi_red_overlay imagen1
+docker service create --name servicio2 --network mi_red_overlay imagen2
+```
+
+En este caso, estamos utilizando servicios en lugar de contenedores directamente, ya que las redes superpuestas se utilizan principalmente en entornos de orquestación como Docker Swarm.
+
+3. Conexión en una red Macvlan
+
+Crear una red Macvlan (si no está creada):
+
+```sh
+docker network create -d macvlan --subnet=192.168.1.0/24 --gateway=192.168.1.1 -o parent=eth0 mi_red_macvlan
+```
+
+Asegúrate de reemplazar 192.168.1.0/24 con la subred y la puerta de enlace correctas para tu entorno, y eth0 con el nombre de tu interfaz de red.
+
+Iniciar dos contenedores y conectarlos a la red Macvlan:
+
+```sh
+docker run -d --name contenedor1 --network mi_red_macvlan imagen1
+docker run -d --name contenedor2 --network mi_red_macvlan imagen2
+```
+
+Al igual que en el caso de la red de puente, aquí estamos utilizando contenedores directamente en 
+lugar de servicios de Swarm.
+
+Estos son los pasos básicos para conectar contenedores en diferentes tipos de redes en Docker. 
+
 ## Volúmenes en Docker
 - Persistencia de datos en contenedores
 - Tipos de volúmenes
