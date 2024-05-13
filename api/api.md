@@ -27,7 +27,7 @@ Escalabilidad: Permite escalar sistemas de manera más efectiva al dividir la fu
 
 ## Conceptos básicos de API REST
 
--Principios de REST
+- Principios de REST
 
 REST (Representational State Transfer) es un estilo arquitectónico para diseñar servicios web que se basa en los siguientes principios:
 
