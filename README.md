@@ -213,15 +213,5 @@
 - Protección contra ataques comunes (SQL injection, XSS, etc.)
 - Documentación de APIs
 
-## Importancia de la documentación
-- Herramientas para documentar APIs (Swagger, API Blueprint, etc.)
-- Consumo de APIs
 
-## Uso de APIs públicas (ejemplo: OpenWeatherMap, Google Maps, etc.)
-- Uso de librerías para consumir APIs en diferentes lenguajes de programación
-- Consideraciones adicionales
-
-## Versionado de APIs
-- Monitoreo y análisis de uso
-- Buenas prácticas en el diseño de APIs
 
