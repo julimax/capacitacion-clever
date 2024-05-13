@@ -21,8 +21,11 @@ Existen varios tipos de APIs, entre los más comunes se encuentran:
   Las APIs son fundamentales en el desarrollo de software por varias razones:
 
 Reutilización de código: Permite a los desarrolladores reutilizar funcionalidades de otros sistemas sin tener que desarrollarlas desde cero.
+
 Interoperabilidad: Facilita la comunicación entre diferentes sistemas, incluso si están desarrollados en diferentes lenguajes de programación o se ejecutan en diferentes plataformas.
+
 Facilidad de mantenimiento: Al exponer solo una interfaz externa, los cambios internos en la implementación de un sistema no afectan a los sistemas que lo utilizan a través de la API.
+
 Escalabilidad: Permite escalar sistemas de manera más efectiva al dividir la funcionalidad en servicios independientes que se comunican a través de APIs.
 
 ## Conceptos básicos de API REST
@@ -66,9 +69,64 @@ Las URIs en una API REST deben ser significativas y representar de manera clara 
 ## Creación de una API REST
 
 - Diseño de endpoints
+  
+El diseño de endpoints en una API REST es una parte fundamental, ya que determina cómo los clientes interactuarán con los recursos de la API. Algunos principios importantes a considerar en el diseño de endpoints son:
+
+Utilizar nombres de recursos significativos y descriptivos.
+
+Utilizar verbos HTTP apropiados para cada operación (GET, POST, PUT, DELETE).
+
+Evitar la inclusión de acciones en los nombres de los endpoints (por ejemplo, /actualizar-usuario en lugar de /usuarios/actualizar).
+
+Utilizar rutas anidadas de manera lógica para representar relaciones entre recursos (por ejemplo, /usuarios/{id}/posts para obtener los posts de un usuario específico).
+
 - Implementación de endpoints en un servidor web (Node.js, Flask, Django, etc.)
-- Uso de herramientas como Postman para probar la API
+
+Implementación de endpoints en un servidor web
+
+La implementación de endpoints en un servidor web puede variar dependiendo del lenguaje y el framework que estés utilizando. Aquí hay un ejemplo básico de cómo podrías implementar un endpoint en Node.js usando Express:
+
+´´´ javascript
+  const express = require('express');
+  const app = express();
+  
+  // Endpoint para obtener todos los usuarios
+  app.get('/usuarios', (req, res) => {
+    // Lógica para obtener todos los usuarios
+    res.json({ usuarios: [] });
+  });
+  
+  // Endpoint para crear un nuevo usuario
+  app.post('/usuarios', (req, res) => {
+    // Lógica para crear un nuevo usuario
+    res.status(201).json({ mensaje: 'Usuario creado exitosamente' });
+  });
+  
+  // Iniciar el servidor en el puerto 3000
+  app.listen(3000, () => {
+    console.log('Servidor iniciado en el puerto 3000');
+  });
+´´´
+
+- Uso de herramientas como Postman o ThunderClient para probar la API
+
+Postman es una herramienta muy útil para probar APIs, ya que te permite enviar solicitudes HTTP a tus endpoints y ver las respuestas. Puedes usar Postman para probar diferentes métodos HTTP, enviar datos en el cuerpo de la solicitud, establecer encabezados personalizados y mucho más.
+
+De igual manera ThunderClient que se puede integrar en Visual Studio Code
+
 - Seguridad en APIs
+
+La seguridad en APIs es un aspecto crítico a tener en cuenta. Algunas prácticas comunes para asegurar tu API incluyen:
+
+Utilizar HTTPS en lugar de HTTP para proteger la comunicación.
+
+Autenticar y autorizar las solicitudes de los clientes.
+
+Validar y sanitizar los datos de entrada para prevenir ataques como inyecciones SQL y XSS.
+
+Limitar el acceso a recursos sensibles utilizando tokens de acceso o certificados.
+
+Implementar buenas prácticas de seguridad ayudará a proteger tu API y los datos de tus usuarios.
 
 ## Autenticación y autorización
 - Uso de tokens (JWT)
