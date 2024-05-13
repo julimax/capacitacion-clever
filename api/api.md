@@ -87,7 +87,7 @@ Implementación de endpoints en un servidor web
 La implementación de endpoints en un servidor web puede variar dependiendo del lenguaje y el framework que estés utilizando. Aquí hay un ejemplo básico de cómo podrías implementar un endpoint en Node.js usando Express:
 
 ```javascript
-  const express = require('express');
+  import express from 'express';
   const app = express();
   
   // Endpoint para obtener todos los usuarios
