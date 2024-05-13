@@ -28,11 +28,40 @@ Escalabilidad: Permite escalar sistemas de manera más efectiva al dividir la fu
 ## Conceptos básicos de API REST
 
 -Principios de REST
-- Métodos HTTP (GET, POST, PUT, DELETE, etc.)
-- Recursos y URIs
-- Creación de una API REST
 
-## Diseño de endpoints
+REST (Representational State Transfer) es un estilo arquitectónico para diseñar servicios web que se basa en los siguientes principios:
+
+Cliente-servidor: Existe una separación entre la interfaz de usuario (cliente) y el servidor que almacena los datos y la lógica de la aplicación. Esto permite que ambos evolucionen de forma independiente.
+
+Sin estado (stateless): Cada petición HTTP contiene toda la información necesaria para realizarla, lo que significa que el servidor no necesita mantener un estado de la comunicación entre peticiones. Cada petición se procesa de forma independiente.
+
+Cacheable: Las respuestas a las peticiones deben ser marcadas como cacheables o no cacheables para mejorar la eficiencia de la red.
+
+Interfaz uniforme: Las operaciones se realizan sobre recursos, que son identificados por URIs. Para interactuar con estos recursos, se utilizan métodos HTTP estándar (GET, POST, PUT, DELETE) y se emplean representaciones de los recursos en formatos como JSON o XML.
+
+Sistema de capas (Layered system): Permite que la arquitectura esté compuesta por capas, lo que facilita la escalabilidad y la seguridad del sistema.
+
+- Métodos HTTP (GET, POST, PUT, DELETE, etc.)
+
+Los métodos HTTP más comunes utilizados en APIs REST son:
+
+GET: Se utiliza para recuperar información de un recurso.
+POST: Se utiliza para crear un nuevo recurso.
+PUT: Se utiliza para actualizar un recurso existente.
+DELETE: Se utiliza para eliminar un recurso.
+Además de estos, existen otros métodos como PATCH (para realizar modificaciones parciales a un recurso), HEAD (similar a GET pero solo devuelve los encabezados de la respuesta) y OPTIONS (utilizado para obtener información sobre las opciones de comunicación disponibles para el recurso).
+
+- Recursos y URIs
+
+En una API REST, los recursos son las entidades que se manipulan a través de la interfaz. Cada recurso tiene una identificación única que se representa mediante una URI (Uniform Resource Identifier).
+
+Por ejemplo, si tenemos un recurso "producto", su URI podría ser "/productos". Para acceder a un producto específico, se utilizaría una URI como "/productos/123", donde "123" es el identificador único del producto.
+
+Las URIs en una API REST deben ser significativas y representar de manera clara la estructura de los recursos y las relaciones entre ellos.
+
+## Creación de una API REST
+
+- Diseño de endpoints
 - Implementación de endpoints en un servidor web (Node.js, Flask, Django, etc.)
 - Uso de herramientas como Postman para probar la API
 - Seguridad en APIs
