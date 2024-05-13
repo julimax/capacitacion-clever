@@ -129,9 +129,37 @@ Limitar el acceso a recursos sensibles utilizando tokens de acceso o certificado
 Implementar buenas prácticas de seguridad ayudará a proteger tu API y los datos de tus usuarios.
 
 ## Autenticación y autorización
+
+La autenticación y autorización son aspectos clave de la seguridad en las APIs. La autenticación verifica la identidad del usuario, mientras que la autorización determina si el usuario tiene permiso para acceder a un recurso específico. Algunas prácticas comunes incluyen:
+
+Utilizar protocolos estándar como OAuth para la autenticación.
+Implementar mecanismos de autorización basados en roles para controlar el acceso a recursos.
+
 - Uso de tokens (JWT)
+
+JSON Web Tokens (JWT) son una forma segura y eficiente de transmitir información entre partes como un objeto JSON. En el contexto de las APIs, los JWT se utilizan comúnmente para autenticar a los usuarios y compartir información de forma segura entre el cliente y el servidor.
+
 - Protección contra ataques comunes (SQL injection, XSS, etc.)
+
+Es importante proteger tu API contra ataques comunes como inyecciones SQL y XSS. Algunas medidas preventivas incluyen:
+
+Utilizar consultas parametrizadas para prevenir inyecciones SQL.
+
+Validar y sanitizar los datos de entrada para prevenir XSS.
+
+Utilizar HTTPS para proteger la comunicación entre el cliente y el servidor.
+
 - Documentación de APIs
+  
+Descripción de los endpoints disponibles y sus parámetros.
+
+Ejemplos de solicitudes y respuestas.
+
+Información sobre autenticación y autorización.
+
+Ejemplos de código para diferentes lenguajes de programación.
+
+La documentación de APIs es crucial para que los desarrolladores comprendan cómo utilizar tu API de manera efectiva. Algunas herramientas populares para documentar APIs incluyen Swagger, API Blueprint y Postman. La documentación debe incluir:
 
 ## Importancia de la documentación
 - Herramientas para documentar APIs (Swagger, API Blueprint, etc.)
