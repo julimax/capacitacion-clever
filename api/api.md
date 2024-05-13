@@ -161,14 +161,3 @@ Ejemplos de código para diferentes lenguajes de programación.
 
 La documentación de APIs es crucial para que los desarrolladores comprendan cómo utilizar tu API de manera efectiva. Algunas herramientas populares para documentar APIs incluyen Swagger, API Blueprint y Postman. La documentación debe incluir:
 
-## Importancia de la documentación
-- Herramientas para documentar APIs (Swagger, API Blueprint, etc.)
-- Consumo de APIs
-
-## Uso de APIs públicas (ejemplo: OpenWeatherMap, Google Maps, etc.)
-- Uso de librerías para consumir APIs en diferentes lenguajes de programación
-- Consideraciones adicionales
-
-## Versionado de APIs
-- Monitoreo y análisis de uso
-- Buenas prácticas en el diseño de APIs
