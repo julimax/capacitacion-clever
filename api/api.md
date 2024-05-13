@@ -19,14 +19,14 @@ Existen varios tipos de APIs, entre los más comunes se encuentran:
 - Importancia de las APIs en el desarrollo de software
 
   Las APIs son fundamentales en el desarrollo de software por varias razones:
-
-Reutilización de código: Permite a los desarrolladores reutilizar funcionalidades de otros sistemas sin tener que desarrollarlas desde cero.
-
-Interoperabilidad: Facilita la comunicación entre diferentes sistemas, incluso si están desarrollados en diferentes lenguajes de programación o se ejecutan en diferentes plataformas.
-
-Facilidad de mantenimiento: Al exponer solo una interfaz externa, los cambios internos en la implementación de un sistema no afectan a los sistemas que lo utilizan a través de la API.
-
-Escalabilidad: Permite escalar sistemas de manera más efectiva al dividir la funcionalidad en servicios independientes que se comunican a través de APIs.
+  
+  - Reutilización de código: Permite a los desarrolladores reutilizar funcionalidades de otros sistemas sin tener que desarrollarlas desde cero.
+  
+  - Interoperabilidad: Facilita la comunicación entre diferentes sistemas, incluso si están desarrollados en diferentes lenguajes de programación o se ejecutan en diferentes plataformas.
+  
+  - Facilidad de mantenimiento: Al exponer solo una interfaz externa, los cambios internos en la implementación de un sistema no afectan a los sistemas que lo utilizan a través de la API.
+  
+  - Escalabilidad: Permite escalar sistemas de manera más efectiva al dividir la funcionalidad en servicios independientes que se comunican a través de APIs.
 
 ## Conceptos básicos de API REST
 
