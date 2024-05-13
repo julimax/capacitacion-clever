@@ -46,9 +46,13 @@ Sistema de capas (Layered system): Permite que la arquitectura esté compuesta p
 Los métodos HTTP más comunes utilizados en APIs REST son:
 
 GET: Se utiliza para recuperar información de un recurso.
+
 POST: Se utiliza para crear un nuevo recurso.
+
 PUT: Se utiliza para actualizar un recurso existente.
+
 DELETE: Se utiliza para eliminar un recurso.
+
 Además de estos, existen otros métodos como PATCH (para realizar modificaciones parciales a un recurso), HEAD (similar a GET pero solo devuelve los encabezados de la respuesta) y OPTIONS (utilizado para obtener información sobre las opciones de comunicación disponibles para el recurso).
 
 - Recursos y URIs
