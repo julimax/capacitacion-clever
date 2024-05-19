@@ -152,7 +152,7 @@ $1, $2, ... # Los argumentos posicionales pasados al script.
 ```
 
 - Scope de las variables (local, global)
-- 
+  
 En Bash, las variables pueden tener un ámbito local o global. Por defecto, las variables son globales, pero se pueden declarar como locales dentro de funciones.
 
 Variables Globales:
