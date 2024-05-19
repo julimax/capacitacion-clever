@@ -71,10 +71,116 @@ rmdir nombre_del_directorio
 ```
 
 ## 3. Variables y Tipos de Datos
+
 - Declaración de variables
+
+En Bash, declarar una variable es simple y no requiere el uso de palabras clave especiales como en otros lenguajes de programación. Simplemente se asigna un valor a un nombre de variable.
+
+```bash
+mi_variable="Hola, Mundo!"
+numero=42
+```
+Para acceder al valor de una variable, se usa el signo $ seguido del nombre de la variable.
+
+```bash
+echo $mi_variable  # Imprime: Hola, Mundo!
+echo $numero       # Imprime: 42
+```
+
 - Tipos de datos (números, cadenas, arrays)
+
+Bash no tiene tipos de datos formales como otros lenguajes de programación. Sin embargo, se pueden manejar diferentes tipos de datos como números, cadenas y arrays.
+
+Números:
+
+```bash
+# Variables numéricas
+numero=10
+otro_numero=20
+
+# Operaciones aritméticas se realizan con `expr` o doble paréntesis
+resultado=$(expr $numero + $otro_numero)
+echo $resultado  # Imprime: 30
+
+# Con doble paréntesis
+resultado=$((numero + otro_numero))
+echo $resultado  # Imprime: 30
+```
+
+Cadenas:
+
+```bash
+# Variables de cadena
+saludo="Hola"
+nombre="Mundo"
+
+# Concatenación de cadenas
+mensaje="$saludo, $nombre!"
+echo $mensaje  # Imprime: Hola, Mundo!
+```
+
+Arrays:
+
+```bash
+# Declaración de un array
+mi_array=("valor1" "valor2" "valor3")
+
+# Acceder a elementos del array
+echo ${mi_array[0]}  # Imprime: valor1
+
+# Agregar un elemento al array
+mi_array+=("valor4")
+
+# Obtener todos los elementos del array
+echo ${mi_array[@]}  # Imprime: valor1 valor2 valor3 valor4
+```
+
 - Variables predefinidas y especiales
+
+Bash tiene varias variables predefinidas y especiales que son útiles en scripts:
+
+$HOME: El directorio de inicio del usuario actual.
+$PWD: El directorio de trabajo actual.
+$PATH: Las rutas de búsqueda para comandos.
+$USER: El nombre del usuario actual.
+$?: El estado de salida del último comando ejecutado.
+$#: El número de argumentos pasados al script.
+$@: Todos los argumentos pasados al script como una lista.
+$0: El nombre del script.
+$1, $2, ...: Los argumentos posicionales pasados al script.
+
 - Scope de las variables (local, global)
+- 
+En Bash, las variables pueden tener un ámbito local o global. Por defecto, las variables son globales, pero se pueden declarar como locales dentro de funciones.
+
+Variables Globales:
+
+Las variables globales están disponibles en todo el script y en cualquier función dentro del script.
+
+```bash
+mi_variable_global="Soy global"
+
+function mi_funcion {
+    echo $mi_variable_global  # Imprime: Soy global
+}
+
+mi_funcion
+```
+Variables Locales:
+
+Las variables locales solo están disponibles dentro de la función donde se declaran.
+
+```bash
+function mi_funcion {
+    local mi_variable_local="Soy local"
+    echo $mi_variable_local  # Imprime: Soy local
+}
+
+mi_funcion
+
+# Intentar acceder a una variable local fuera de su función dará un error
+echo $mi_variable_local  # No imprime nada
+```
 
 ## 4. Operaciones y Expresiones
 - Operadores aritméticos
