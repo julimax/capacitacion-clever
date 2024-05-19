@@ -213,5 +213,67 @@
 - Protección contra ataques comunes (SQL injection, XSS, etc.)
 - Documentación de APIs
 
+---
+
+# Temario para Estudiar Bash
+
+## 1. Introducción a Bash
+- ¿Qué es Bash?
+- Historia y evolución de Bash
+- Instalación y configuración de Bash
+- Comparación con otros shells (sh, csh, ksh, zsh)
+
+## 2. Conceptos Básicos
+- Sintaxis de Bash
+- Ejecución de comandos básicos
+- Navegación del sistema de archivos
+- Comandos esenciales (ls, cd, pwd, cp, mv, rm, mkdir, rmdir)
+
+## 3. Variables y Tipos de Datos
+- Declaración de variables
+- Tipos de datos (números, cadenas, arrays)
+- Variables predefinidas y especiales
+- Scope de las variables (local, global)
+
+## 4. Operaciones y Expresiones
+- Operadores aritméticos
+- Operadores de comparación
+- Operadores lógicos
+- Expresiones regulares
+
+## 5. Estructuras de Control
+- Condicionales (if, else, elif)
+- Bucles (for, while, until)
+- Case statements
+- Uso de break y continue
+
+## 6. Funciones
+- Definición y uso de funciones
+- Parámetros y argumentos
+- Funciones recursivas
+- Scope de variables en funciones
+
+## 7. Entrada y Salida
+- Redirección de entrada/salida
+- Pipes (|) y uso avanzado
+- Entrada y salida estándar
+- Uso de /dev/null
+
+## 8. Manejo de Archivos y Directorios
+- Manipulación de archivos (lectura, escritura, borrado)
+- Permisos de archivos y directorios
+- Compresión y descompresión de archivos
+- Búsqueda de archivos (find, grep, locate)
+
+## 9. Scripting Avanzado
+- Creación y ejecución de scripts
+- Uso de shebang (#!)
+- Debugging de scripts (set -x, set -e)
+
+## 10. Manejo de Procesos
+- Gestión de procesos (ps, top, kill)
+- Creación de procesos en background
+
+
 
 
