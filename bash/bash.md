@@ -543,33 +543,3 @@ Para ejecutar un proceso en segundo plano, puedes agregar un & al final del coma
 ```bash
 ./mi_script.sh &
 ```
-
-## 11. Trabajando con Texto
-
-- Manipulación de texto (cut, sort, uniq, tr, sed, awk)
-- Expresiones regulares avanzadas
-- Procesamiento de archivos CSV y JSON
-- Herramientas para procesamiento de texto (grep, sed, awk)
-
-## 12. Programación de Bash Segura
-- Manejo de errores y excepciones
-- Validación de entrada de usuario
-- Principios de scripting seguro
-- Prácticas recomendadas
-
-## 13. Automatización y Tareas Programadas
-- Crontab y tareas programadas
-- Scripts de inicio del sistema
-- Automatización de tareas comunes
-- Ejecución de scripts en intervalos regulares
-
-## 14. Integración y Uso de Herramientas Externas
-- Uso de herramientas como curl, wget
-- Interacción con APIs
-- Automatización de despliegues (Git, Docker, Terraform)
-- Interacción con sistemas de control de versiones
-
-## 15. Ejemplos y Proyectos Prácticos
-- Proyectos de ejemplo para practicar
-- Scripts útiles para la administración del sistema
-- Desafíos y ejercicios prácticos
