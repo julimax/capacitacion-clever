@@ -139,25 +139,17 @@ echo ${mi_array[@]}  # Imprime: valor1 valor2 valor3 valor4
 
 Bash tiene varias variables predefinidas y especiales que son útiles en scripts:
 
-\documentclass{article}
-\usepackage{amsmath}
-
-\begin{document}
-
-\begin{itemize}
-    \item \texttt{\$HOME}: El directorio de inicio del usuario actual.
-    \item \texttt{\$PWD}: El directorio de trabajo actual.
-    \item \texttt{\$PATH}: Las rutas de búsqueda para comandos.
-    \item \texttt{\$USER}: El nombre del usuario actual.
-    \item \texttt{\$\text{\textquestiondown}}: El estado de salida del último comando ejecutado.
-    \item \texttt{\$\#}: El número de argumentos pasados al script.
-    \item \texttt{\$\@}: Todos los argumentos pasados al script como una lista.
-    \item \texttt{\$0}: El nombre del script.
-    \item \texttt{\$1, \$2, ...}: Los argumentos posicionales pasados al script.
-\end{itemize}
-
-\end{document}
-
+```bash
+$HOME # El directorio de inicio del usuario actual.
+$PWD # El directorio de trabajo actual.
+$PATH # Las rutas de búsqueda para comandos.
+$USER # El nombre del usuario actual.
+$? # El estado de salida del último comando ejecutado.
+$# # El número de argumentos pasados al script.
+$@ # Todos los argumentos pasados al script como una lista.
+$0 # El nombre del script.
+$1, $2, ... # Los argumentos posicionales pasados al script.
+```
 
 - Scope de las variables (local, global)
 - 
