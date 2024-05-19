@@ -269,10 +269,103 @@ sed -i 's/foo/bar/g' archivo.txt
 ```
 
 ## 5. Estructuras de Control
+
 - Condicionales (if, else, elif)
+
+En Bash, puedes utilizar la estructura if, else y elif para realizar operaciones condicionales basadas en el valor de las variables u otras condiciones.
+
+```bash
+edad=18
+
+if [ $edad -eq 18 ]; then
+    echo "Eres mayor de edad"
+elif [ $edad -lt 18 ]; then
+    echo "Eres menor de edad"
+else
+    echo "Eres mayor de edad"
+fi
+```
+
 - Bucles (for, while, until)
+
+En Bash, puedes utilizar diferentes tipos de bucles para repetir acciones basadas en una condición.
+
+Bucle for:
+
+```bash
+for i in {1..5}; do
+    echo "Número: $i"
+done
+```
+
+Bucle while:
+
+```bash
+contador=0
+
+while [ $contador -lt 5 ]; do
+    echo "Contador: $contador"
+    ((contador++))
+done
+```
+
+Bucle until:
+
+```bash
+contador=0
+
+until [ $contador -eq 5 ]; do
+    echo "Contador: $contador"
+    ((contador++))
+done
+```
+
 - Case statements
+
+Los statements case en Bash permiten realizar múltiples comparaciones en una estructura más compacta que múltiples if-elif-else.
+
+```bash
+fruta="manzana"
+
+case $fruta in
+    manzana)
+        echo "Es una manzana"
+        ;;
+    naranja)
+        echo "Es una naranja"
+        ;;
+    *)
+        echo "No reconocido"
+        ;;
+esac
+```
+
 - Uso de break y continue
+
+break: Se utiliza para salir de un bucle.
+continue: Se utiliza para saltar a la siguiente iteración de un bucle.
+
+Ejemplo con break:
+
+```bash
+for i in {1..5}; do
+    if [ $i -eq 3 ]; then
+        break
+    fi
+    echo "Número: $i"
+done
+```
+
+Ejemplo con continue:
+
+```bash
+for i in {1..5}; do
+    if [ $i -eq 3 ]; then
+        continue
+    fi
+    echo "Número: $i"
+done
+```
 
 ## 6. Funciones
 - Definición y uso de funciones
