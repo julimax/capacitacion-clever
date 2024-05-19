@@ -368,22 +368,130 @@ done
 ```
 
 ## 6. Funciones
+
 - Definición y uso de funciones
-- Parámetros y argumentos
+
+En Bash, puedes definir funciones para encapsular y reutilizar bloques de código.
+Puedes pasar parámetros a una función en Bash. Dentro de la función, puedes acceder a estos parámetros utilizando $1, $2, etc., para el primer, segundo, etc
+La sintaxis para definir una función es la siguiente:
+
+```bash
+function saludar {
+    echo "Hola, $1"
+}
+
+saludar "Juan"
+```
+
 - Funciones recursivas
-- Scope de variables en funciones
+
+Bash admite funciones recursivas, donde una función se llama a sí misma dentro de su propio cuerpo. Por ejemplo, aquí hay una función factorial recursiva:
+
+```bash
+function factorial {
+    if [ $1 -eq 0 ]; then
+        echo 1
+    else
+        echo $(( $1 * $(factorial $(( $1 - 1 ))) ))
+    fi
+}
+
+resultado=$(factorial 5)
+echo "El factorial de 5 es $resultado"
+```
+
 
 ## 7. Entrada y Salida
+
 - Redirección de entrada/salida
+
+En Bash, puedes redirigir la entrada y salida estándar de los comandos utilizando los operadores <, >, >>, entre otros.
+
+<: Redirige la entrada estándar desde un archivo hacia un comando.
+>: Redirige la salida estándar de un comando hacia un archivo (crea o sobrescribe el archivo).
+>>: Redirige la salida estándar de un comando hacia un archivo (agrega al final del archivo).
+
+```bash
+# Redirigir la salida del comando ls hacia un archivo llamado archivos.txt
+ls > archivos.txt
+
+# Redirigir la entrada del comando sort desde un archivo llamado input.txt
+sort < input.txt
+
+# Redirigir la salida del comando echo hacia un archivo existente (agregando al final)
+echo "Hola" >> archivo.txt
+```
+  
 - Pipes (|) y uso avanzado
+
+Los pipes (|) permiten enviar la salida de un comando como entrada a otro comando, lo que permite combinar varios comandos para realizar tareas más complejas.
+
+```bash
+# Mostrar los procesos del sistema ordenados por uso de CPU
+ps aux --sort=-%cpu | head
+```
+
 - Entrada y salida estándar
+
+Entrada Estándar (stdin): Se refiere a la entrada de datos de un comando. Por defecto, la entrada estándar es el teclado, pero puede ser redirigida desde un archivo o desde la salida de otro comando.
+Salida Estándar (stdout): Se refiere a la salida de datos de un comando. Por defecto, la salida estándar es la pantalla, pero puede ser redirigida hacia un archivo o hacia la entrada de otro comando.
+
 - Uso de /dev/null
 
+/dev/null es un dispositivo especial en sistemas Unix-like que se puede usar como un agujero negro para desechar datos. Puedes redirigir la salida a /dev/null para eliminarla.
+
+```bash
+# Ejecutar un comando y desechar la salida
+comando > /dev/null
+```
+
 ## 8. Manejo de Archivos y Directorios
-- Manipulación de archivos (lectura, escritura, borrado)
+
 - Permisos de archivos y directorios
+
+En Bash, puedes cambiar los permisos de archivos y directorios utilizando el comando chmod. Por ejemplo, para dar permisos de lectura, escritura y ejecución a un archivo para el propietario, y solo permisos de lectura para los demás, puedes hacer:
+
+```bash
+chmod 744 archivo.txt
+```
+
+chmod es un comando en sistemas operativos Unix y Unix-like (como Linux) que se utiliza para cambiar los permisos de acceso a archivos y directorios. La palabra "chmod" significa "change mode" (cambiar modo).
+
+
 - Compresión y descompresión de archivos
+
+Para comprimir y descomprimir archivos en Bash, puedes utilizar herramientas como gzip, bzip2, zip, tar, entre otros.
+
+Compresión con gzip:
+
+```bash
+gzip archivo.txt
+```
+
+Descompresión con gzip:
+
+```bash
+gzip -d archivo.txt.gz
+```
+
+Compresión con tar:
+
+```bash
+tar -czf archivo.tar.gz archivo1 archivo2
+```
+Descompresión con tar:
+
+```bash
+tar -xzf archivo.tar.gz
+```
+  
 - Búsqueda de archivos (find, grep, locate)
+
+find: Permite buscar archivos en función de diferentes criterios como nombre, tipo, tamaño, etc. Por ejemplo, para buscar archivos con extensión .txt en el directorio actual y sus subdirectorios:
+
+```bash
+find . -type f -name "*.txt"
+```
 
 ## 9. Scripting Avanzado
 - Creación y ejecución de scripts
@@ -421,18 +529,7 @@ done
 - Automatización de despliegues (Git, Docker, Terraform)
 - Interacción con sistemas de control de versiones
 
-## 15. Buenas Prácticas y Optimización
-- Documentación de scripts
-- Estructuración y modularidad del código
-- Mejora del rendimiento de scripts
-- Uso de herramientas de análisis y linting (shellcheck)
-
-## 16. Ejemplos y Proyectos Prácticos
+## 15. Ejemplos y Proyectos Prácticos
 - Proyectos de ejemplo para practicar
 - Scripts útiles para la administración del sistema
 - Desafíos y ejercicios prácticos
-
-## Recursos Adicionales
-- Libros recomendados
-- Cursos en línea y tutoriales
-- Comunidades y foros de soporte
