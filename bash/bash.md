@@ -494,18 +494,58 @@ find . -type f -name "*.txt"
 ```
 
 ## 9. Scripting Avanzado
+
 - Creación y ejecución de scripts
-- Parámetros y opciones de línea de comandos
+
+Para crear un script en Bash, simplemente crea un archivo de texto con la extensión .sh y escribe tus comandos en él. Por ejemplo, crea un archivo llamado mi_script.sh con el siguiente contenido:
+
+```bash
+#!/bin/bash
+
+echo "Hola, mundo!"
+```
 - Uso de shebang (#!)
+
+El #!/bin/bash, también conocido como shebang o hashbang, se utiliza al principio de un script de shell (como Bash) para indicar al sistema operativo qué intérprete debe utilizar para ejecutar el script.
+
 - Debugging de scripts (set -x, set -e)
 
+set -x: Activa el modo verbose, mostrando cada comando antes de ejecutarlo. Útil para ver qué comandos se están ejecutando y en qué orden.
+
+set -e: Hace que el script se detenga si un comando devuelve un código de error distinto de cero. Esto evita que el script continúe ejecutándose si un comando falla.
+
 ## 10. Manejo de Procesos
+
 - Gestión de procesos (ps, top, kill)
+
+ps: Muestra información sobre los procesos en ejecución. Puedes usar diferentes opciones para personalizar la salida, como ps aux para mostrar todos los procesos del sistema.
+
+```bash
+ps aux
+```
+
+top: Muestra una lista dinámica de los procesos en ejecución y su uso de recursos. Es útil para monitorear el rendimiento del sistema en tiempo real.
+
+```bash
+top
+```
+
+kill: Se utiliza para enviar señales a procesos. Por ejemplo, para detener un proceso, puedes usar kill -9 PID, donde PID es el identificador del proceso que deseas detener.
+
+```bash
+kill -9 12345
+```
+
 - Creación de procesos en background
-- Jobs y control de trabajos
-- Señales y manejo de señales
+
+Para ejecutar un proceso en segundo plano, puedes agregar un & al final del comando. Por ejemplo, para ejecutar un script en segundo plano:
+
+```bash
+./mi_script.sh &
+```
 
 ## 11. Trabajando con Texto
+
 - Manipulación de texto (cut, sort, uniq, tr, sed, awk)
 - Expresiones regulares avanzadas
 - Procesamiento de archivos CSV y JSON
