@@ -185,10 +185,88 @@ echo $mi_variable_local  # No imprime nada
 ```
 
 ## 4. Operaciones y Expresiones
+
 - Operadores aritméticos
+
+En Bash, puedes utilizar varios operadores aritméticos para realizar operaciones matemáticas en variables numéricas. Algunos de los operadores más comunes son:
+
++: Suma
+-: Resta
+*: Multiplicación
+/: División
+%: Módulo (resto de la división)
+
+```bash
+a=10
+b=3
+suma=$((a + b))        # suma = 13
+resta=$((a - b))       # resta = 7
+multiplicacion=$((a * b))  # multiplicacion = 30
+division=$((a / b))     # division = 3
+modulo=$((a % b))       # modulo = 1
+```
+  
 - Operadores de comparación
+
+Los operadores de comparación en Bash se utilizan para comparar valores y devolver un resultado verdadero o falso. Algunos operadores comunes son:
+
+-eq: Igual a
+-ne: No igual a
+-gt: Mayor que
+-lt: Menor que
+-ge: Mayor o igual que
+-le: Menor o igual que
+
+```bash
+a=10
+b=20
+
+if [ $a -eq $b ]; then
+    echo "a es igual a b"
+fi
+
+if [ $a -lt $b ]; then
+    echo "a es menor que b"
+fi
+```
+
 - Operadores lógicos
+
+Los operadores lógicos en Bash se utilizan para combinar expresiones lógicas y devolver un resultado verdadero o falso. Algunos operadores comunes son:
+
+&&: Y lógico (AND)
+||: O lógico (OR)
+!: Negación lógica (NOT)
+
+```bash
+a=10
+b=20
+
+if [ $a -lt 100 ] && [ $b -gt 10 ]; then
+    echo "Ambas condiciones son verdaderas"
+fi
+
+if [ $a -lt 5 ] || [ $b -gt 100 ]; then
+    echo "Al menos una de las condiciones es verdadera"
+fi
+
+if ! [ $a -eq 0 ]; then
+    echo "a no es igual a 0"
+fi
+```
+
 - Expresiones regulares
+
+En Bash, puedes utilizar expresiones regulares en combinación con herramientas como grep o sed para buscar y manipular texto de forma avanzada. Por ejemplo, para buscar líneas que contengan la palabra "hello" en un archivo:
+
+```bash
+grep "hello" archivo.txt
+```
+O para sustituir todas las ocurrencias de "foo" por "bar" en un archivo:
+
+```bash
+sed -i 's/foo/bar/g' archivo.txt
+```
 
 ## 5. Estructuras de Control
 - Condicionales (if, else, elif)
