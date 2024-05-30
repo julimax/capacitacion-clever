@@ -1,7 +1,19 @@
 
   name: CI Workflow
   
-  on: push
+  on:
+    push:
+      branches:
+        # - main
+        - 'release/*'
+    pull_request:
+      branches:
+        - main
+    schedule:
+      - cron: '0 0 * * 0'  # Cada domingo a medianoche
+    workflow_dispatch:
+    release:
+      types: [published]
   
   jobs:
     build:
