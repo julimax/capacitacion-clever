@@ -1,7 +1,5 @@
 name: Variable Example
-
 on: [push]
-
 env:
   WORKFLOW_VAR: "This is a workflow-level variable"
 
