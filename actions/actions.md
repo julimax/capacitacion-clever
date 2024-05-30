@@ -106,6 +106,19 @@ on:
     types: [published]
 ```
 
+  - Schedule: La palabra clave schedule en GitHub Actions se utiliza para definir workflows que se ejecutan automáticamente en momentos específicos, utilizando una expresión cron para programar las ejecuciones. Esto es útil para tareas que necesitan ejecutarse periódicamente sin intervención manual, como mantenimiento, actualizaciones, análisis o pruebas regulares.
+
+```scss
+ ┌───────────── minuto (0 - 59)
+ │ ┌───────────── hora (0 - 23)
+ │ │ ┌───────────── día del mes (1 - 31)
+ │ │ │ ┌───────────── mes (1 - 12)
+ │ │ │ │ ┌───────────── día de la semana (0 - 7) (domingo=0 o 7)
+ │ │ │ │ │
+ │ │ │ │ │
+ 0 0 * * 0
+```
+
 - Definición de Jobs
   - Nombre y configuración básica de un Job.
     - Cada job tiene un nombre y una configuración básica que incluye el tipo de runner a utilizar ```runs-on:```, los pasos a seguir ```steps:```, y otras configuraciones opcionales.
