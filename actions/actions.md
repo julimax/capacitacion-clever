@@ -164,8 +164,44 @@ on:
   - Estrategias de matriz (matrix).
     - Las estrategias de matriz (matrix) permiten ejecutar múltiples variaciones de un job con diferentes configuraciones. Esto es útil para probar el código en diferentes entornos, versiones de lenguajes, sistemas operativos, etc.
 
+```yml
+name: CI Workflow
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12, 14, 16]
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
+```
+
 - Definición de Steps
-  - Uso de comandos run.
+  - Uso de comandos run: En GitHub Actions, el comando run se utiliza para ejecutar comandos de shell directamente en los pasos (steps) de un workflow. Puedes utilizar cualquier comando que normalmente ejecutarías en la línea de comandos del sistema operativo especificado por el runner.
+
+```yml
+      - name: Run a script
+        run: |
+          echo "Running a multi-line script"
+          echo "Hello, world!"
+```
+
   - Uso de Actions predefinidas.
   - Uso de scripts inline y archivos de scripts.
   - Contextos y Expresiones
