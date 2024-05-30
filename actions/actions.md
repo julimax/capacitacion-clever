@@ -108,8 +108,48 @@ on:
 
 - Definición de Jobs
   - Nombre y configuración básica de un Job.
+    - Cada job tiene un nombre y una configuración básica que incluye el tipo de runner a utilizar ```runs-on:```, los pasos a seguir ```steps:```, y otras configuraciones opcionales.
   - Dependencias entre Jobs (needs).
+    - Puedes definir dependencias entre jobs utilizando la palabra clave needs. Esto permite ejecutar jobs en secuencia, donde un job espera a que otro job termine antes de comenzar.
+      
+```yml
+      name: CI Workflow
+
+      on: [push]
+      
+      jobs:
+        build:
+          runs-on: ubuntu-latest
+          steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
+      
+            - name: Build project
+              run: npm build
+      
+        test:
+          runs-on: ubuntu-latest
+          needs: build  # Depende del job "build"
+          steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
+      
+            - name: Run tests
+              run: npm test
+      
+        deploy:
+          runs-on: ubuntu-latest
+          needs: test  # Depende del job "test"
+          steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
+      
+            - name: Deploy to production
+              run: ./deploy.sh
+```
+
   - Estrategias de matriz (matrix).
+    - Las estrategias de matriz (matrix) permiten ejecutar múltiples variaciones de un job con diferentes configuraciones. Esto es útil para probar el código en diferentes entornos, versiones de lenguajes, sistemas operativos, etc.
 
 - Definición de Steps
   - Uso de comandos run.
