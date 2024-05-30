@@ -62,6 +62,32 @@ GitHub Actions es una plataforma de automatización de CI/CD (Integración Conti
 
 - Estructura de un Workflow
   - Archivo de configuración (.github/workflows/<nombre>.yml).
+
+```bash
+
+  name: CI Workflow
+  
+  on: [push, pull_request]
+  
+  jobs:
+    build:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout code
+          uses: actions/checkout@v2
+  
+        - name: Set up Node.js
+          uses: actions/setup-node@v2
+          with:
+            node-version: '14'
+  
+        - name: Install dependencies
+          run: npm install
+  
+        - name: Run tests
+          run: npm test
+```
+
   - Sintaxis YAML básica.
   - Eventos que desencadenan Workflows (on).
 
