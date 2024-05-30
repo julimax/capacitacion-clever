@@ -5,6 +5,7 @@ env:
 
 jobs:
   build:
+    environment: test
     runs-on: ubuntu-latest
     env:
       JOB_VAR: "This is a job-level variable"
@@ -25,3 +26,5 @@ jobs:
           echo "env= ${{ env.STEP_VAR }}"
           echo "env_custom= ${{ env.NAME }}"
 
+      - name: Print job-level variable
+        run: echo "variable ${{ env.VAR_TEST }}"
