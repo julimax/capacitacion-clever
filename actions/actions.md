@@ -2,7 +2,27 @@
 
 - Conceptos Básicos
   - ¿Qué es GitHub Actions?
+ 
+GitHub Actions es una plataforma de automatización de CI/CD (Integración Continua y Entrega Continua) que permite definir y ejecutar flujos de trabajo automatizados directamente desde un repositorio de GitHub. 
+
   - Ventajas de usar GitHub Actions.
+
+  1. Integración Nativa con GitHub
+  
+  2. Flexibilidad y Personalización
+  
+  3. Marketplace de Actions
+  
+  4. Automatización Completa
+  
+  5. Escalabilidad y Paralelismo
+  
+  6. Uso de Runners Propios y Alojados
+  
+  7. Gestión de Secretos y Variables de Entorno
+  
+  8. Monitoreo y Reportes
+    
   - Casos de uso.
 
 - Componentes de GitHub Actions
