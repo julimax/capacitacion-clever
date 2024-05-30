@@ -47,7 +47,8 @@
 
 
     notificacion:
+      needs: deploy
       runs-on: ubuntu-latest
       steps:
         - name: Envio de email
-          run: echo "enviando email"
+          run: echo "enviando email deployx exitoso"
