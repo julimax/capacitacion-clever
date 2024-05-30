@@ -14,6 +14,7 @@ jobs:
           ls
           cd scripts
           ls
+          chmod +x build.sh
           ./build.sh
 
       - name: Run build script
