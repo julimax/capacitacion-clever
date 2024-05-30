@@ -50,7 +50,7 @@
 
 
     notificacion:
-      needs: deploy
+      needs: test
       runs-on: ubuntu-latest
       steps:
         - name: Envio de email
