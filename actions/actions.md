@@ -47,12 +47,16 @@ GitHub Actions es una plataforma de automatización de CI/CD (Integración Conti
   - Workflows en GitHub Actions son definiciones de procesos automatizados que se ejecutan en respuesta a eventos específicos en un repositorio de GitHub. Cada workflow se define en un archivo YAML dentro del directorio .github/workflows/ de tu repositorio.
 
   - Jobs: Un workflow puede contener uno o más jobs que se ejecutan en paralelo o en secuencia.
-
-Jobs: Un workflow puede contener uno o más jobs que se ejecutan en paralelo o en secuencia.
   
-  - Steps.
-  - Actions.
-  - Runners.
+  - Steps son las unidades más pequeñas de un job y representan tareas individuales que se ejecutan secuencialmente dentro de un job. Los steps pueden ejecutar comandos de shell, utilizar acciones predefinidas o definir scripts personalizados.
+    
+  - Actions son unidades reutilizables de código que pueden realizar tareas específicas dentro de un workflow. Pueden ser desarrolladas por la comunidad o por los propios usuarios y se pueden encontrar en el GitHub Marketplace.
+    
+  - Runners son máquinas que ejecutan los jobs de los workflows. GitHub ofrece runners alojados en GitHub (GitHub-hosted runners) y la opción de configurar runners auto-hospedados (self-hosted runners).
+
+    - GitHub-hosted Runners: Proporcionados y mantenidos por GitHub, disponibles en múltiples plataformas como ubuntu-latest, windows-latest, macos-latest.
+      
+    - Self-hosted Runners: Configurados y mantenidos por el usuario, permitiendo mayor control sobre el entorno de ejecución.
 
 ## Configuración de Workflows
 
