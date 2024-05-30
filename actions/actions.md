@@ -108,7 +108,7 @@ on:
 
   - Schedule: La palabra clave schedule en GitHub Actions se utiliza para definir workflows que se ejecutan automáticamente en momentos específicos, utilizando una expresión cron para programar las ejecuciones. Esto es útil para tareas que necesitan ejecutarse periódicamente sin intervención manual, como mantenimiento, actualizaciones, análisis o pruebas regulares.
 
-```scss
+```plaintext
  ┌───────────── minuto (0 - 59)
  │ ┌───────────── hora (0 - 23)
  │ │ ┌───────────── día del mes (1 - 31)
