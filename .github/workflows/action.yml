@@ -4,7 +4,7 @@
   on:
     push:
       branches:
-        # - main
+        - main
         - 'release/*'
     pull_request:
       branches:
@@ -42,5 +42,12 @@
         - name: Checkout code
           uses: actions/checkout@v2
       
-        - name: Build project
+        - name: Deploy project
           run: echo "esto es un deployment"
+
+
+    notificacion:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Envio de email
+          run: echo "enviando email"
