@@ -7,41 +7,41 @@ GitHub Actions es una plataforma de automatización de CI/CD (Integración Conti
 
   - Ventajas de usar GitHub Actions.
 
-  1. Integración Nativa con GitHub
-  
-  2. Flexibilidad y Personalización
-  
-  3. Marketplace de Actions
-  
-  4. Automatización Completa
-  
-  5. Escalabilidad y Paralelismo
-  
-  6. Uso de Runners Propios y Alojados
-  
-  7. Gestión de Secretos y Variables de Entorno
-  
-  8. Monitoreo y Reportes
+    1. Integración Nativa con GitHub
     
+    2. Flexibilidad y Personalización
+    
+    3. Marketplace de Actions
+    
+    4. Automatización Completa
+    
+    5. Escalabilidad y Paralelismo
+    
+    6. Uso de Runners Propios y Alojados
+    
+    7. Gestión de Secretos y Variables de Entorno
+    
+    8. Monitoreo y Reportes
+      
   - Casos de uso.
 
-  1. Integración Continua (CI)
+    1. Integración Continua (CI)
+    
+    2. Entrega Continua (CD)
+    
+    3. Publicación de Paquetes
+    
+    4. Automatización de Tareas de Mantenimiento
+    
+    5. Notificaciones y Alertas
   
-  2. Entrega Continua (CD)
-  
-  3. Publicación de Paquetes
-  
-  4. Automatización de Tareas de Mantenimiento
-  
-  5. Notificaciones y Alertas
-
-  6. Integración con Herramientas de Terceros
-     
-  7. Deployments Multi-Cloud
-  
-  8. Pruebas de Seguridad y Análisis de Vulnerabilidades
-  
-  9. Automatización de Infraestructura como Código (IaC)
+    6. Integración con Herramientas de Terceros
+       
+    7. Deployments Multi-Cloud
+    
+    8. Pruebas de Seguridad y Análisis de Vulnerabilidades
+    
+    9. Automatización de Infraestructura como Código (IaC)
 
 - Componentes de GitHub Actions
   - Workflows en GitHub Actions son definiciones de procesos automatizados que se ejecutan en respuesta a eventos específicos en un repositorio de GitHub. Cada workflow se define en un archivo YAML dentro del directorio .github/workflows/ de tu repositorio.
