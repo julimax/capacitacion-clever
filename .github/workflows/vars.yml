@@ -22,6 +22,6 @@ jobs:
           STEP_VAR: "This is a step-level variable"
         id: set_step_var
         run: |
-          echo "name=This is a step-level variable" >> GITHUB_ENV
+          echo echo 'name=This is a step-level variable' >> GITHUB_ENV
           echo "var= ${{ vars.STEP_VAR }}
 
