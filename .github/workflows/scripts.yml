@@ -10,4 +10,8 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Run build script
-        run: ./scripts/build.sh
+        run: |
+          ls
+          cd scripts
+          ls
+          ./scripts/build.sh
