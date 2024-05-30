@@ -63,7 +63,7 @@ GitHub Actions es una plataforma de automatización de CI/CD (Integración Conti
 - Estructura de un Workflow
   - Archivo de configuración (.github/workflows/<nombre>.yml).
 
-```bash
+```yml
 
   name: CI Workflow
   
