@@ -87,9 +87,24 @@ GitHub Actions es una plataforma de automatización de CI/CD (Integración Conti
         - name: Run tests
           run: npm test
 ```
-
-  - Sintaxis YAML básica.
   - Eventos que desencadenan Workflows (on).
+```yml
+
+name: Event types
+on:
+  push:
+    branches:
+      - main
+      - 'release/*'
+  pull_request:
+    branches:
+      - main
+  schedule:
+    - cron: '0 0 * * 0'  # Cada domingo a medianoche
+  workflow_dispatch:
+  release:
+    types: [published]
+```
 
 - Definición de Jobs
   - Nombre y configuración básica de un Job.
