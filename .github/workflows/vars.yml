@@ -27,4 +27,4 @@ jobs:
           echo "env_custom= ${{ env.NAME }}"
 
       - name:  variable env
-        run: echo "variable ${{ env.VAR_TEST }}"
+        run: echo "variable ${{ vars.VAR_TEST }}"
