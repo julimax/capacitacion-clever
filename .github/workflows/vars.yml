@@ -26,5 +26,5 @@ jobs:
           echo "env= ${{ env.STEP_VAR }}"
           echo "env_custom= ${{ env.NAME }}"
 
-      - name: Print job-level variable
+      - name:  variable env
         run: echo "variable ${{ env.VAR_TEST }}"
