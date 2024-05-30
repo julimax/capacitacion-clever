@@ -16,7 +16,7 @@
       types: [published]
   
   jobs:
-    build:
+    test:
       runs-on: ubuntu-latest
       steps:
         - name: Checkout code
@@ -35,3 +35,12 @@
         - name: Install dependencies
           run: npm install
 
+    deploy:
+      runs-on: ubuntu-latest
+      needs: test
+      steps:
+        - name: Checkout code
+          uses: actions/checkout@v2
+      
+        - name: Build project
+          run: echo "esto es un deployment"
