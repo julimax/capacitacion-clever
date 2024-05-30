@@ -202,13 +202,146 @@ jobs:
           echo "Hello, world!"
 ```
 
-  - Uso de Actions predefinidas.
-  - Uso de scripts inline y archivos de scripts.
-  - Contextos y Expresiones
+  - Uso de Actions predefinidas: GitHub Actions proporciona muchas acciones predefinidas que puedes utilizar para realizar tareas comunes. Estas acciones están disponibles en el Marketplace de GitHub Actions.
 
-- Contextos (github, env, jobs, etc.).
+```yml
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+```
+    
+  - Uso de scripts inline y archivos de scripts: Puedes incluir scripts directamente en el archivo YAML (scripts inline) o ejecutar scripts almacenados en archivos del repositorio.
+
+```yml
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run build script
+        run: ./scripts/build.sh
+```
+    
+  - - Contextos (github, env, jobs, etc.): GitHub Actions proporciona contextos y expresiones para acceder a información y datos dentro de los workflows. Los contextos contienen datos sobre el workflow, los eventos que lo desencadenaron, los jobs, los pasos y más.
+
+```yml
+name: Context testing
+on: workflow_dispatch
+
+jobs:
+  dump_contexts_to_log:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
+      - name: Dump job context
+        env:
+          JOB_CONTEXT: ${{ toJson(jobs) }}
+        run: echo "$JOB_CONTEXT"
+      - name: Dump steps context
+        env:
+          STEPS_CONTEXT: ${{ toJson(steps) }}
+        run: echo "$STEPS_CONTEXT"
+      - name: Dump runner context
+        env:
+          RUNNER_CONTEXT: ${{ toJson(runner) }}
+        run: echo "$RUNNER_CONTEXT"
+      - name: Dump strategy context
+        env:
+          STRATEGY_CONTEXT: ${{ toJson(strategy) }}
+        run: echo "$STRATEGY_CONTEXT"
+      - name: Dump matrix context
+        env:
+          MATRIX_CONTEXT: ${{ toJson(matrix) }}
+        run: echo "$MATRIX_CONTEXT"
+
+      - name: mis agregados
+        env:
+          CONTEXT: ${{ toJson(toJson(github.sha)) }}
+        run: echo "$CONTEXT"
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Print GitHub context
+        run: echo "Repository: ${{ github.repository }}"
+
+      - name: Print event name
+        run: echo "Event: ${{ github.event_name }}"
+```
+
   - Expresiones y sintaxis.
-  - Variables de entorno y secretos.
+```plaintext
+    Sintaxis de expresiones
+    Las expresiones se utilizan para acceder a datos y realizar operaciones lógicas, aritméticas y de comparación. A continuación se presenta la sintaxis básica de las expresiones y algunos ejemplos de su uso.
+    
+    Operadores de expresiones
+    Acceso a propiedades: context.property
+    Operadores lógicos: && (AND), || (OR), ! (NOT)
+    Operadores de comparación: ==, !=, <, >, <=, >=
+    Operadores aritméticos: +, -, *, /, %
+    Operadores de funciones: contains(), startsWith(), endsWith(), format()
+```
+
+    - Variables de entorno y secretos.
+      - Variables de entorno: Se utilizan para almacenar y reutilizar valores configurables en varios niveles (workflow, job, step). Se definen usando la clave env.
+```yml
+name: Variable Example
+
+on: [push]
+
+env:
+  WORKFLOW_VAR: "This is a workflow-level variable"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      JOB_VAR: "This is a job-level variable"
+    steps:
+      - name: Print workflow-level variable
+        run: echo "Workflow variable: ${{ env.WORKFLOW_VAR }}"
+
+      - name: Print job-level variable
+        run: echo "Job variable: ${{ env.JOB_VAR }}"
+
+      - name: Set step-level variable
+        id: set_step_var
+        run: echo "name=This is a step-level variable" >> GITHUB_ENV
+
+      - name: Print step-level variable
+        run: echo "Step variable: ${{ steps.set_step_var.outputs.STEP_VAR }}"
+```
+      
+      - Secretos: Se utilizan para almacenar valores sensibles y se inyectan en los workflows de manera segura. Se definen en la configuración del repositorio y se accede a ellos usando secrets.SECRET_NAME.
+```yml
+name: Secret Example
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Use a secret
+        env:
+          STEP_SECRET: ${{ secrets.MY_SECRET }}
+        run: echo "Secret: ${{ env.STEP_SECRET }}"
+```
 
  ## Creación y Uso de Actions
 
